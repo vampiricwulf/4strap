@@ -1,0 +1,791 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("4chan.org") {
+    
+    /* Colors */
+
+    body {
+        background: rgb(240,240,240) !important;
+        color: rgb(0,0,0) !important;
+    }
+    a {
+        color: rgb(52, 52, 92) !important;
+    }
+    a:hover {
+        color: rgb(221, 0, 0) !important;
+    }
+    #boardNavDesktop {
+        box-shadow: 18px 0px 10px 3px rgba(0,0,0,0.2) !important;
+        background-color: rgba(235, 235, 235,0.4) !important;
+        background-image: linear-gradient(rgba(252, 252, 252,0.9), rgba(235, 235, 235,0.9)) !important;
+        background-repeat: repeat-x !important;
+        border-bottom: 1px solid rgb(230,230,230) !important;
+    }
+    #boardNavDesktop>a:not(.current) {
+        color: rgb(153,153,153) !important;
+    }
+    #boardNavDesktop>a:hover {
+        color: rgb(0,0,0) !important;
+    }
+    #stats {
+        border-left: 1px solid rgb(230,230,230) !important;
+        color: rgb(153,153,153) !important;
+    }
+    #stats:hover {
+        color: rgb(255,255,255) !important;
+    }
+    .current::after {
+        border-bottom: 1px solid rgb(210, 105, 17) !important;
+        color: rgb(0,0,0) !important;
+    }
+    .settingsWindowLink::after {
+        color: rgb(153,153,153) !important;
+    }
+    .settingsWindowLink:hover::after {
+        color: rgb(0,0,0) !important;
+    }
+    div.boardBanner > div.boardTitle {
+        color: rgb(255,255,255) !important;
+        text-shadow: 1px 1px 1px rgb(0, 0, 0) !important;
+        background-color: rgba(0,0,0,0.3) !important;
+    }
+    form>h1>a {
+        color: rgb(255, 255, 255) !important;
+        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25) !important;
+        background-image: linear-gradient(to bottom, rgb(91, 192, 222), rgb(47, 150, 180)) !important;
+        background-repeat: repeat-x !important;
+        border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25) !important;
+        background-color: rgb(47, 150, 180) !important;
+    }
+    form>h1>a:hover {
+        color: rgb(255,255,255) !important;
+    }
+    #globalMessage {
+        background-color: rgb(255,255,255) !important;
+        border: 1px solid rgb(217,217,217) !important;
+        color: rgb(0,0,0) !important;
+    }
+    #hideBtn>a:first-of-type::after {
+        color: rgb(0,0,0) !important;
+    }
+    input::-moz-placeholder, textarea::-moz-placeholder {
+        color: rgb(153, 153, 153) !important;
+    }
+    textarea:not(:focus), .field:not(:focus), #qr [type=file] [type=text]:not(:focus) {
+        border: 1px solid rgb(204, 204, 204) !important;
+    }
+    #qr [type=file] [type=text]:focus {
+        border: 1px solid rgba(82, 168, 236, 0.8) !important; 
+    }
+    textarea, .field, #qr [type=file] [type=text] {
+        background-color: rgba(255, 255, 255, 1) !important;
+    }
+    select, textarea:not(:focus), .field:not(:focus), #qr [type=file] [type=text]:not(:focus) {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset !important;
+        background-color: rgba(255, 255, 255, 1) !important;
+    }
+    textarea:focus, .field:focus, #qr [type=file] [type=text]:focus {
+        border-color: rgba(82, 168, 236, 0.8) !important;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(82, 168, 236, 0.6);
+    }
+    input[type="submit"]:hover, #dump:hover, #qr [type=file] [type=button]:hover {
+        background-color: rgb(230, 230, 230) !important; 
+        color: rgb(51, 51, 51) !important;
+    }
+    input[type="submit"]:hover, #dump:hover, input[type="submit"]:active, input[type="submit"].active, input[type="submit"].disabled, input[type="submit"][disabled] {
+        background-color: rgb(230, 230, 230) !important;
+    }
+    input[type="submit"], #dump, #qr [type=file] [type=button] {
+        border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25) !important;
+        background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(230, 230, 230)) !important;
+        text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75) !important;
+        box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2) inset, 0px 1px 2px rgba(0, 0, 0, 0.05) !important;
+    }
+    #qr {
+        box-shadow: 1px 3px 10px 6px rgba(50,50,50,0.1) !important;
+        background-color: rgba(220,220,220,1) !important;
+    }
+    #qr .move {
+        color: transparent !important;
+    }
+    .thread>.replyContainer>.reply {
+        background-color: rgb(255,255,255) !important;
+        border: 1px solid rgb(217,217,217) !important;
+    }
+    #qp, #qp .reply {
+        background-color: rgb(255,255,255) !important;
+    }
+    #qp {
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2) !important;
+        border: 1px solid rgba(0,0,0, 0.1) !important;
+    }
+    .qphl {
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2) !important;
+    }
+    a.quotelink {
+        color: rgb(0, 136, 204) !important;
+    }
+    a.quotelink:hover {
+        color: rgb(0, 85, 128) !important;
+    }
+    .name, .postertrip {
+        color: rgb(90,90,90) !important;
+    }
+    .replyContainer>div.reply>div.postInfo {
+        border-bottom: 1px solid rgb(204, 204, 204) !important;
+        background-color: rgb(225, 225, 225) !important;
+        background-image: linear-gradient(rgb(248, 248, 248), rgb(225, 225, 225)) !important;
+        background-repeat: repeat-x !important;
+    }
+    .reply .menu_button {
+        border-left: 1px solid rgb(217,217,217);
+        border-right: 1px solid rgb(217,217,217);
+    }
+    .menu_button span {
+        border-top: 4px solid rgb(0, 0, 0) !important;
+        border-right: 4px solid transparent !important;
+        border-left: 4px solid transparent !important;
+    }
+    .menu_button:hover {
+        background-color: rgb(230, 230, 230) !important;
+    }
+    .replyContainer>.reply .fileInfo {
+        background-color: rgba(200,200,200,0.2) !important;
+        border-bottom: 1px solid rgb(204, 204, 204);
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.125) inset;
+        color: rgba(0,0,0,0.3) !important;
+    }
+    #qp .op .fileInfo {
+        color: rgba(0,0,0,0.3) !important;
+    }
+    .reply .fileInfo a {
+        color: rgba(0,0,0,0.3) !important;
+    }
+    .quotelink.filtered {
+        color: rgb(190,190,190) !important;
+    }
+    .quotelink.filtered:hover {
+        color: rgb(255,0,0) !important;
+    }
+    .warning:not(:empty) {
+        color: rgb(185, 74, 72) !important;
+        background: rgb(242, 222, 222) !important;
+        border: 1px solid rgba(238, 50, 50,0.3) !important;
+    }
+    .fileThumb {
+        border: 1px solid rgb(221, 221, 221) !important;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.055) !important;
+    }
+    .fileThumb:hover {
+        border-color: rgb(0, 136, 204) !important;
+        box-shadow: 0px 1px 4px rgba(0, 105, 214, 0.25) !important;
+    }
+    #menu, .subMenu {
+        background-color: rgb(255,255,255) !important;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2) !important;     
+        border: 1px solid rgba(0, 0, 0, 0.2) !important;
+    }
+    .entry:hover {
+        color: rgb(255, 255, 255) !important;
+        background-color: rgb(0, 129, 194) !important;
+        background-image: linear-gradient(to bottom, rgb(0, 136, 204), rgb(0, 119, 179)) !important;
+        background-repeat: repeat-x !important;
+    }
+    .subMenu>.entry:hover:first-of-type {
+        box-shadow: -1px 0px 0px rgb(0, 119, 179) !important;
+    }
+    .hasSubMenu::after {
+        border-left-color: rgb(204,204,204) !important;
+    }
+    .entry:hover::after {
+        border-left-color: rgb(255,255,255) !important;
+    }
+    .pagelist {
+        background-color: rgb(255,255,255) !important;
+        border: 1px solid rgb(204,204,204) !important;
+    }
+    .pages>a, .pages>strong {
+        border-left: 1px solid rgb(204,204,204) !important;
+        border-right: 1px solid rgb(204,204,204) !important;
+    }
+    .pages>a {
+       color: rgb(0, 136, 204) !important; 
+    }
+    .pages>a:hover {
+        color: rgb(0, 85, 128) !important;
+    }
+    .prev span::after, .next span::after, .pages strong {
+        color: rgb(0,0,0) !important;
+    }
+    #overlay {
+        background: none repeat scroll 0% 0% rgba(25, 25, 25, 0.6) !important;
+    }
+    #options {
+        background: rgb(255,255,255) !important;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4) !important; 
+    }
+    a.summary {
+        background: rgb(255,255,255) !important;
+        border: 1px solid rgb(221,221,221) !important;
+        box-shadow: 0px 3px 7px rgba(50, 50, 50, 0.2) inset !important;
+        color: rgb(187,187,187) !important;
+    }
+    .thread>.opContainer>.op .subject:not(:empty) {
+        background: -moz-linear-gradient(center top , rgb(239, 239, 239), rgb(219, 219, 219)) repeat scroll 0% 0% transparent !important;
+        color: rgb(102, 102, 102) !important;
+        text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3);
+        border-top: 1px solid rgb(221,221,221);
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2) !important; 
+    }
+    #imgControls>label::after {
+        background: -moz-linear-gradient(center top , rgb(114, 114, 114), rgb(21, 19, 19)) repeat scroll 0% 0% transparent !important;
+        color: rgb(255, 255, 255) !important;
+        text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) !important; 
+    }
+    #watcher:not(:hover) {
+        border-left: 1px solid rgb(230,230,230) !important;
+    }
+    #watcher .move {
+        color: rgb(153,153,153) !important;
+    }
+    #watcher:hover {
+        background: rgba(240,240,240,0.7) !important;
+        border: 1px solid rgb(230,230,230) !important;
+        box-shadow: 0px 5px 10px rgba(40, 40, 40, 0.2) !important; 
+    }
+
+    /* Layout */
+    
+    #absbot, 
+    .replyContainer>.reply input, 
+    #navbotright,
+    hr, .deleteform, 
+    .stylechanger, 
+    #updater,
+    #dump,
+    .navLinks, 
+    .postingMode,
+    .toggleCatalog,
+    #navtopright a[target],
+    .boardSubtitle,
+    .center,
+    #boardNavDesktopFoot,
+    #qr #autohide,
+    #qp .menu_button,
+    iframe,
+    #imgControls>label input,
+    #qr .move select,
+    .reply:not(:hover) .backlink.filtered,
+    .postingMode ~ #watcher,
+    #watcher:not(:hover)>div:not(.move) {
+        display: none !important;
+    }
+    .replyContainer>.reply>.postInfo {
+        padding-left: 10px !important;
+    }
+    #boardNavDesktop {
+        position: fixed !important;
+        height: 21px !important;
+        top: 0px !important;
+        font-size: 0px !important;
+        width: 100% !important;
+        margin: auto !important;
+        padding-left: 86px !important;
+        margin-left: -10px !important;
+        padding-top: 5px !important;
+        z-index: 2;
+    }
+    #boardNavDesktop>a {
+        display: none !important;
+        font-size: 13px !important;
+        margin-right: 4px !important;
+    }
+    #boardNavDesktop>a[href*="/a/"],
+    #boardNavDesktop>a[href*="/g/"],
+    #boardNavDesktop>a[href*="/v/"],
+    #boardNavDesktop>a[href*="/vg/"],
+    #boardNavDesktop>a[href*="/hm/"],
+    #boardNavDesktop>a[href*="/cm/"],
+    #boardNavDesktop>a[href*="/y/"],
+    #boardNavDesktop>a[href*="/ck/"],
+    #boardNavDesktop>a[href*="/fit/"],
+    #boardNavDesktop>a[href*="/lit/"],
+    #boardNavDesktop>a[href*="/mu/"],
+    #boardNavDesktop>a[href*="/pol/"],
+    #boardNavDesktop>a[href*="/tv/"],
+    #boardNavDesktop>a[href*="/wsg/"],
+    #boardNavDesktop>a[href*="/q/"],
+    #boardNavDesktop>a.current,
+    #boardNavDesktop>a.current::after
+    {
+        display: inline !important;
+    }
+    #overlay {
+        z-index: 5 !important;
+    }
+    #stats {
+        position: fixed !important;
+        top: 0px !important;
+        bottom: auto !important;
+        right: 0px !important;
+        padding-top: 6px !important;
+        padding-bottom: 4px !important;
+        padding-left: 8px !important;
+        padding-right: 10px !important;
+        left: auto !important;
+        z-index: 3 !important;
+        font-size: 13px !important;
+    }
+    #stats:hover, #stats .move:hover {
+        cursor: default !important;
+    }
+    #boardNavDesktop>a.current {
+        font-size: 0px !important;
+    }
+    .current::after {
+        font-size: 13px !important;
+        content: attr(title) !important;
+        margin-left: 2px !important;
+        margin-right: 2px !important;
+        padding: 5px 6px !important;
+    }
+    #navtopright {
+        position: absolute !important;
+        left: 14px !important;
+        top: 4px !important;
+        letter-spacing: 0px !important;
+    }
+    .settingsWindowLink {
+        font-size: 0px !important;
+        height: 18px !important;
+    }
+    .settingsWindowLink::before {
+        content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAA/BJREFUOE9jYCARaOVKK8v4CIsCtTES1CqSzmshlMGTLxjD7SooyMWBrkEkk88pZLbzL4tW3ft8hpwmovH8MgZOCjxYDRfPF6pMXOr9t3lP4v+0Ff7/pDJF17PyM4NcAgOMOnUqW/qOpPxv35/4XzJH5Ib7ZOsfujWql/iUOVXRDWU0bNA8Vr41/H/JZt//pZv9/qev9PsvEMwzBaiQC2ois32v8bPSLf5g+bglTv9LtwT+z18X8p/bnb0fqAbhI4MkZXaJLKFFFt3aQIX2/2OX2P1PXOb836JN7wu3FIcl1HYWsw7dd/FLHcDyMJy1JvA/ixvzZqAaIbDFiYkejNLFEkusegz/m3er/zfuVIZj+36T/5we7NOByjiBmMWwSfOBWZcaXN4CqN6qy/Afpzp7O1CeG2ygR6gxm3Kl4l35Ktn/PHmc/zlz2P9z5bL/583n+q9YLfdfKVf+NlCZIhAzyRVLHxQuEgCqYfsvXir6X75C7i+3HecuoJwJSB4e2EKOPE7iiSKHVcoUPmpUq/xUq1T6oVwk/0EiXuw2tz3HaqBCNZC3+VK5+zym2P/XbdL4J5Ui/pRLgx0UxsZAzIqeIkCmi7KxsZgKiHL78PJz+jIyMjgAxXSBWALkXZAG8QhBa74Anm3c6hwdzMxMLkAhEWSXoRsKdzE0ErAlXGagnDA0vOBexGUQirhGnqyUUCpfEFAQPYEzamjIMhsba4BcDTIUf47RyVXiky4W6wyZ7fjZf7rDLz4lLjeQJslcYRfFcpn5Vu36x+17je4695s+ALLPSeWKThXzFQAFDcj1qEAxT0rVoFn9au2O2P9t+6P/V2+PASZaDnCyEczka+w6kPW/40AcMKdEg+U7gezWfYn/bTqN3grr8cHSK8RQvQIlfr0mtdslm4L/5673BOOyLSH/ZVIkzgGlpcSiBW3C5jn/g8mB6DyoGut2w5/c0hwJKK7ky+TOsu0z+a/fKg/HRu3K/zXLVd8CFRqKiwtwaNWoXLHq0YLLm3dp/lfMkn7DoczWA1SjhBKerMksLXKVcv8Z0xn/s2Sy/GdIY/jPlM70X7JI8gdQoSNIMX8kT6J8lfx/pgwmsLxAgcB/2RyZlywszKC0iBo5otGCjgpV8n8VqhX+CwIVChcJ/2fNZP0vXyj3CWYgOzsrp0iy0HLFasX/0hXSwJyk+F80QeQBIyOjOUaEMDMzsHH7c5ZLp0he4THkmitRJPFep0nnP18A71mgYk2YBg5eNiFeN+4K7kDOvVwOnGvZeFijgHJ8uNIiO1BCFohF+E157Lg9OOdyCLHHAPmwIgymD5TVQAkcVMJgZDtchoMSLcggkCVEAwAmfD6sSOi/rgAAAABJRU5ErkJggg==') !important;
+        position: absolute !important;
+    }
+    .settingsWindowLink::after {
+        content: "4chan";
+        font-size: 15px !important;
+        position: absolute !important;
+        left: 20px !important;
+        top: -3px !important;
+        font-weight: bold !important;
+        padding-top: 3px !important;
+        padding-bottom: 3px !important;
+        padding-left: 4px !important;
+        padding-right: 4px !important;
+    }    
+    div.boardBanner {
+        margin-bottom: -40px !important;
+        margin-top: 10px !important;
+    }
+    div.boardBanner > div.boardTitle {
+        font-family: Tahoma,sans-serif;
+        letter-spacing: -2px;
+        font-weight: 400 !important;
+        position: relative !important;
+        bottom: 70px !important;
+        margin: auto !important;
+        width: 272px !important;
+        height: 30px !important;
+        padding-top: 0px !important;
+    }
+    a:focus, input:focus, textarea:focus, a:active, input:active {
+        outline: none !important;
+    }
+    form>h1>a {
+        font-size: 14px !important;
+        padding: 7px 12px !important;
+        padding-bottom: 1px !important;
+        vertical-align: middle !important;
+        font-weight: normal !important;
+    }
+    form>h1>a:hover {
+        background-image: none !important;
+        transition: background-position 0.1s linear 0s !important;
+    }
+    a:not(.filtered) {
+        text-decoration: none !important;
+    }
+    #globalMessage * {
+        font-size: 12px !important;
+        font-weight: normal !important;
+    }
+    #globalMessage {
+        margin-bottom: 20px !important;
+        width: 30% !important;
+        border-radius: 4px !important;
+        padding: 10px !important;
+        padding-top: 8px !important;
+        max-height: 160px !important;
+        overflow: auto !important;
+        text-overflow: ellipsis !important;
+        margin: auto !important;
+        width: 90% !important;
+        max-height: none !important;
+        margin-bottom: 10px !important;
+    }
+    #hideBtn {
+        font-size: 0px !important;
+        position: relative !important;
+        top: 20px;
+        width: 100px !important;
+        left: 96px;
+    }
+    #hideBtn a {
+        font-size: 11px !important;
+        margin-right: 3px;
+    }
+    #hideBtn>a:first-of-type::after {
+        content: " |";
+        font-size: 11px;
+    }
+    #qr [type=file] [type=text] {
+        margin-top: -1px !important;
+        margin-bottom: -5px !important;
+        position: relative !important;
+        top: 3px !important;
+        width: 62% !important;
+        height: 21px !important;
+    }
+    textarea, .field, #qr [type=file] [type=text] {
+        -moz-appearance: none !important;
+        border-radius: 4px !important;
+        outline: 0px none !important;
+        font-size: 14px !important;
+        vertical-align: middle !important;
+    }
+    #qr [type=file] [type=button] {
+        float: left !important;
+        position: relative !important;
+        top: 2px !important;
+        width: 37% !important;
+        display: inline-block !important;
+    }
+    #qr [type=file] [type=text] {
+        float: right !important;
+    }
+    input[type="submit"]:hover, #dump:hover, #qr [type=file] [type=button]:hover {
+        text-decoration: none !important;
+        background-position: 0px -15px !important;
+        transition: background-position 0.1s linear 0s !important;
+    }
+    input[type="submit"], #dump, form>h1>a, #qr [type=file] [type=button] {
+        display: inline-block !important;
+        text-align: center !important;
+        height: 25px !important;
+        margin: 0px !important;
+        cursor: pointer !important;
+        background-repeat: repeat-x !important;
+        border-width: 1px !important;
+        border-style: solid !important;
+        -moz-border-top-colors: none !important;
+        -moz-border-right-colors: none !important;
+        -moz-border-bottom-colors: none !important;
+        -moz-border-left-colors: none !important;
+        border-image: none !important;
+        -moz-appearance: none !important;
+        border-radius: 4px 4px 4px 4px !important; 
+    }
+    #dump {
+        float: right !important;
+        height: 24px !important;
+    }
+    #qr {
+        border-radius: 4px !important;
+        z-index: 4 !important;
+    }
+    #qr .close {
+        position: absolute !important;
+        top: 1px !important;
+        left: 0px !important;
+        height: 21.5px !important;
+        z-index: 15 !important;
+        font-size: 0px !important;
+        width: 22px !important;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAVCAYAAABCIB6VAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAABIVJREFUSEt9VWkspWcYtdXY1zEYjZJWB1HbIETRSGiVBsGPkoyKJkgkEsTyw1JbjS0jYYJEhWsbYilKI5YfElftKoJo1BZMcdOQdMwUT8/z5d4bN3S+5Nx7v/d+73nPc57lU1JSvJRxqwZoALo6OjoPvb29raKjoz+Li4t7GhMT8zQ4ONjR2tr6Y/xvDhgDOsADQBXg/XcuFax8AGjxhvDw8CcikSh8fn4+f3t7W3RwcPDzzs5O79ra2k/Dw8NZ6enpIVZWVg549kPAENCUilIgl5FqQ83jjo6ObzY3N+uXl5dXenp6JAUFBW9TU1OvMzMzryoqKt6MjY29Xl1dnRkfHy+LjY39UlNT8xOQPpSK4ogFcln4rPRRe3t7ONSJh4aG/omKirqBKtLW1iZVVVVSV1cnfX19cnR0JBx0Mzs7K8EBfbAnCHtl5KycbRE+2FPjtra20L29vd+h6trS0lIgw/q94EN8fX0JtrxbXFwccXV1DZSSsy3sueCrfmhoqN3u7u4rKL4yNTX9X8LbB/HBPj4+tLCwcN7c3Pwc+7yknnNClR4YGxubDg4OPkNYf/r7+5OysrJA7OXlRQkJCWRiYiLcM5GTkxMlJSWRmZmZsMbKs7Ozr5HU6cjIyG+xZsvRM7E2FmyRrJrGxsYLPT09udq8vDw6PDyknJwcMjIyIhcXF0IyaWNjg/z8/OTPOTg4sOrXVVVVP4DPDXjMxPr5+fnex8fHI/Hx8f+qqanJN9jY2FBLSwvt7+9Ta2srTU5O0tHREaWkpAgJldmCiKmzs/MSUYuw5gdYMbFhZWVlgEQiEQcFBd3IbJBt4iROTEwQX+fn51RSUkJaWloKOeBD6urqbqampgaxj5Now8RGpaWlgaenp9MhISEKxOypm5sbicViuri4oLOzM6qvrydzc/M7xA0NDdcQMAC+r4BPBcVpaWm+CHckMTFRwQp3d3dCeIQSpPLycsHfk5MTKi4uJg5fFhUnt7u7+7Krq6vttmJ9VILj0tLSS/h4YWhoKN9QVFREaGNKTk4mAwMDsrW1paamJlpZWaGAgAD5c87OzoQu/QvJfn7bY23cWFZXVz9DZfwRFhZGKioqwia0NwUGBgolJVPHZYZOk/usoaFBZWVlVzMzM2IPD4/vb1cFd8kjOzs7V3SQaGBg4NLe3l5OLiO875uTGBERQRhUEpTkCyTxazwnr2Oh84CP4HUUVM8g3GsO730tjcFDmCWESnjb19c3bGFhEQMOD4CnndB58lmB5rDLyMj4Dh34G2r2DSaXMIR0dXUFOzhszgF3X2Fh4fXc3Nzf/f39v3p6eiaBxwfgQSSfFQrTDQ1iBw/DsOHl1tbWMjrqDEl9V1NTc4NSu+rt7b1cX19/jck2k5ub+wKlx0o/l5Ly6JRPN1Ytn8f4bYomeYLE+eKNEVtbW/vj6Ojoq+np6V8QxSDKqj0rK6uEEyX1lMO/dx4zMau+Tc4nWwL2Ut++wDd3FBd/AOAL8EzgRLGnRlKlPOSZ586l8M7Dv3yABWANcJtyR7E6K+C977z/AP97RDZsb7EeAAAAAElFTkSuQmCC') !important;
+    }
+    #qr .move {
+        width: 105% !important;
+        padding-top: 3px !important;
+        position: absolute !important;
+        top: -13px !important;
+        left: -10px !important;
+        height: 22px !important;
+        font-size: 0px !important;
+    }
+    #qr .move:not(:hover) .close {
+        display: none !important;
+    }
+    .postingMode ~ #qr .move {
+        padding-right: 20px !important;
+        padding-top: 2px !important;
+        padding-bottom: 2px !important;
+    }
+    #qr .captchainput+div {
+        margin-bottom: -1px !important;
+    }
+    #qr:not(.captcha) {
+        min-width: 300px !important;
+    }
+    .boardBanner img {
+        height: 90px !important;
+        width: auto !important;
+    }
+    .thread>.replyContainer>.reply {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    #qp, #qp .reply {
+        padding: 0px !important;
+        border-radius: 4px !important;
+    }
+    .replyContainer>div.reply>div.postInfo {
+        height: 16px !important;
+        padding-top: 1px !important;
+        padding-bottom: 0px !important;
+        display: table !important;
+        padding-right: 26px !important;
+        font-size: 11px !important;
+        width: 100% !important;
+        vertical-align: middle !important;
+    }
+    .inline {
+        font-size: 13px !important;
+        padding: 0px !important;
+    }
+    .inline .post {
+        background: white !important;
+    }
+    .thread>.replyContainer>div.reply {
+        position: relative !important;
+    }
+    .op .postInfo {
+        font-size: 11px !important;
+    }
+    .op .postInfo input {
+        display: none !important;
+    }
+    .reply .menu_button {
+        position: absolute !important;
+        top: 1px !important;
+        right: 0px !important;
+        font-size: 0px !important;
+        height: 16px !important;
+        padding: 2px !important;
+    }
+    .menu_button span {
+        position: relative !important;
+        top: 4px !important;
+        vertical-align: middle !important;
+        display: inline-block !important;
+        width: 0px !important;
+        height: 0px !important;
+    }
+    .op .menu_button {
+        font-size: 0px !important;
+    }
+    .op .menu_button span {
+        position: relative !important;
+        top: -4px !important;
+    }
+    .replyContainer>.reply .fileInfo {
+        width: 100% !important;
+        text-align: right !important;
+        margin-left: 0px !important;
+        font-size: 11px !important;
+        height: 13px !important;
+        padding-bottom: 1px !important;
+    }
+    #qp .op .fileInfo {
+        position: relative;
+        top: 4px;
+        left: 10px;
+    }
+    .op .fileInfo {
+        font-size: 11px !important;
+    }
+    .hide_reply_button, .hide_thread_button {
+        font-size: 11px !important;
+    }
+    .hide_thread_button {
+        margin-right: 4px !important;
+    }
+    .backlink.filtered {
+        float: right !important;
+        position: relative !important;
+        right: 30px !important;
+        opacity: 0.3 !important;
+        text-decoration: none !important;
+        margin-right: 5px !important;
+    }
+    .quotelink.filtered {
+        opacity: 0.5 !important;
+        text-decoration: none !important;
+        font-size: 12px !important;
+    }
+    span.container {
+        margin-left: -2px !important;
+    }
+    .fileInfo>a {
+        margin-right: 10px !important;
+    }
+    .reply .fileThumb {
+        margin-top: 6px !important;
+    }
+    .warning:not(:empty) {
+        position: relative !important;
+        top: 1px !important;
+        right: 1px !important;
+        width: 98% !important;
+        border-radius: 0 0px 4px 4px !important;
+        margin-top: -2px !important;
+        padding: 3px !important;
+        text-align: center;
+    }
+    .fileThumb, .fileThumb img {
+        border-radius: 4px !important;
+    }
+    .fileThumb {
+        transition: all 0.2s ease-in-out 0s !important;    
+    }
+    a.useremail, a.useremail>span {
+        vertical-align: top !important;
+    }
+    #menu, .subMenu {
+        border-radius: 4px !important;
+        padding: 4px 0px !important;
+        margin: 2px 0px 0px !important;
+    }
+    .subMenu {
+        top: -7px !important;
+    }
+    .entry {
+        border-bottom: none !important;
+        padding: 1px 8px !important;
+        padding-bottom: 3px !important;
+    }
+    a.useremail::before {
+        position: relative !important;
+        bottom: 1px !important;
+        display: inline-block !important;
+    }
+    .hasSubMenu::after {
+        top: 2px !important;
+    }
+    .pagelist {
+        border-radius: 4px !important;
+        margin: 20px 10px 20px 100px !important;
+        padding: 0px !important; 
+    }
+    .pages, .prev span, .next span {
+        font-size: 0px !important;
+    }
+    .prev span::after {
+        font-size: 13px !important;
+        content: "<<" !important;
+    }
+    .next span::after {
+        font-size: 13px !important;
+        content: ">>" !important;
+    }
+    .pages>a, .pages>strong {
+        font-size: 13px !important;
+        padding: 10px !important;
+        margin-left: -1px !important;
+    }
+    .next {
+        float: right !important;
+    }
+    .cataloglink {
+        padding-left: 0px !important;
+        margin-left: -5px !important;
+    }
+    #qr [type=file] {
+        margin-bottom: -6px !important;
+        margin-top: -2px !important;
+        height: 27px !important;
+    }
+    #options {
+        border-radius: 4px !important;
+    }
+    #options label {
+        text-decoration: none !important;
+    }
+    a.summary {
+        font-size: 11px !important;
+        position: relative;
+        left: 35px;
+        top: 2px;
+        border-bottom: none !important;
+        padding: 1px 4px !important;
+        border-radius: 2px 2px 0px 0px;
+        font-style: italic !important;
+    }
+    a.summary+.replyContainer>.reply {
+        min-width: 350px !important;
+    }
+    .thread>.opContainer>.op .subject:not(:empty) {
+        font-size: 11px !important;
+        border-radius: 2px !important;
+        padding: 2px 5px !important;
+        position: relative !important;
+        margin-bottom: 2px !important;
+        right: 8px;
+        display: table !important;
+        width: auto !important;
+    }
+    #imgControls>label {
+        font-size: 0px !important;
+    }
+    #imgControls>label::after {
+        font-size: 12px !important;
+        font-weight: bold;
+        content: url('http://i.imgur.com/yNCic.png') " Expand" ;
+        border-radius: 2px !important;
+        padding: 3px 5px !important; 
+        position: relative !important;
+        bottom: 2px !important;
+        left: 5px !important;
+        float: left !important;
+        margin-right: 10px !important;
+    }
+    #imageType {
+        position: relative;
+        bottom: 1px;
+    }
+    #ihover, #qp {
+        z-index: 100 !important;
+    }
+    #watcher {
+        background: none !important;
+        border: none !important;
+        text-decoration: none !important;
+        position: fixed !important;
+        top: -1px !important;
+        right: 0px !important;
+        left: auto !important;
+        z-index: 14;
+    }
+    #watcher:not(:hover) {
+        height: 23px !important;
+    }
+    #watcher .move {
+        text-decoration: none !important;
+        text-align: right !important;
+    }
+    #watcher:hover {
+        border-top: none !important;
+        border-right: none !important;
+        border-radius: 3px !important;  
+    }
+    
+}
+
+@-moz-document domain("boards.4chan.org") {
+    body {
+        margin-bottom: 40px !important;
+        margin-top: 40px !important;
+    }
+}
