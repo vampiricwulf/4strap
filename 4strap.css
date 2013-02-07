@@ -31,8 +31,17 @@
         border-left: 1px solid rgb(230,230,230) !important;
         color: rgb(153,153,153) !important;
     }
-    #stats:hover {
-        color: rgb(255,255,255) !important;
+    #updater:not(:hover) .move {
+        color: transparent !important;
+    }
+    #updater:hover {
+        background-color: rgba(240, 240, 240,0.8) !important;
+        border: none !important;
+        border-left: 1px solid rgb(210,210,210) !important;
+        border-bottom: 1px solid rgb(210,210,210) !important;
+    }
+    #updater #count {
+        background-color: transparent !important;
     }
     .current::after {
         border-bottom: 1px solid rgb(210, 105, 17) !important;
@@ -262,7 +271,6 @@
     #navbotright,
     hr, .deleteform, 
     .stylechanger, 
-    #updater,
     #dump,
     .navLinks, 
     .postingMode,
@@ -339,6 +347,21 @@
     }
     #stats:hover, #stats .move:hover {
         cursor: default !important;
+    }
+    #updater {
+        position: fixed !important;
+        top: 0px !important;
+        bottom: auto !important;
+        right: 0px !important;
+        left: auto !important;
+        z-index: 4;
+    }
+    #updater:not(:hover) .move {
+        padding: 8px !important;
+    }
+    #updater:hover {
+        padding: 5px !important;
+        border-radius: 0px 0px 0px 5px !important;
     }
     #boardNavDesktop>a.current {
         font-size: 0px !important;
