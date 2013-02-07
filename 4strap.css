@@ -4,6 +4,33 @@
     
     /* Colors */
 
+
+    .flashListing tr:nth-of-type(2n+1) {
+        background: rgb(30,30,30) !important;
+        }
+        
+    .flashListing .postblock {
+        background: rgb(50,50,50) !important;
+        color: rgb(255,255,255) !important;
+        border: 1px solid rgb(80,150,150) !important;;
+        }
+        
+    .flashListing a {
+        color: rgb(80,150,150) !important;
+        }
+        
+    .flashListing a:hover {
+        color: rgb(40,75,75) !important;
+        }
+        
+    .flashListing a:visited {
+        color: rgb(80,150,255) !important;
+        }
+
+    .flashListing .highlightPost {
+        background: rgb(50,50,50) !important;
+        }
+
     body {
         background: rgb(240,240,240) !important;
         color: rgb(0,0,0) !important;
