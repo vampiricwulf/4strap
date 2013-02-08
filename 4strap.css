@@ -80,11 +80,14 @@
         text-shadow: 0px -1px 0px rgba(255, 255, 255, 0.25) !important;
         background-image: linear-gradient(to bottom, rgb(120, 200, 200), rgb(80, 150, 150)) !important;
         background-repeat: repeat-x !important;
-        border-color: rgba(255, 255, 255, 0.1) rgba(255, 255, 255, 0.1) rgba(255, 25, 255, 0.25) !important;
+        border-color: rgba(255, 255, 255, 0.1) rgba(255, 255, 255, 0.1) rgba(255, 255, 255, 0.25) !important;
         background-color: rgb(120, 200, 200) !important;
     }
     form>h1>a:hover {
-        color: rgb(255,255,255) !important;
+        color: rgba(255,255,255,0.2) !important;
+        background-image: linear-gradient(to bottom, rgba(120, 200, 200,0.2), rgba(80, 150, 150,0.2)) !important;
+        background-color: rgba(120,200,200,0.2) !important;
+        border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) !important;
     }
     #globalMessage {
         background-color: rgb(255,255,255) !important;
@@ -155,7 +158,7 @@
         color: rgb(0, 255, 0) !important;
     }
     .name, .postertrip {
-        color: rgb(160,160,160) !important;
+        color: rgb(80,220,80) !important;
     }
     .replyContainer>div.reply>div.postInfo {
         border-bottom: 1px solid rgb(51, 51, 51) !important;
@@ -179,13 +182,13 @@
         background-color: rgba(50,50,50,0.2) !important;
         border-bottom: 1px solid rgb(51, 51, 51);
         box-shadow: 0px 3px 8px rgba(255, 255, 255, 0.125) inset;
-        color: rgba(255,255,255,0.3) !important;
+        color: rgb(255,255,255) !important;
     }
     #qp .op .fileInfo {
-        color: rgba(255,255,255,0.3) !important;
+        color: rgb(255,255,255) !important;
     }
     .reply .fileInfo a {
-        color: rgba(255,255,255,0.3) !important;
+        color: rgb(255,255,255) !important;
     }
     .quotelink.filtered {
         color: rgb(60,60,60) !important;
@@ -200,7 +203,7 @@
     }
     .fileThumb {
         border: 1px solid rgb(221, 221, 221) !important;
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.055) !important;
+        box-shadow: 0px 1px 3px rgba(255, 255, 255, 0.055) !important;
     }
     .fileThumb:hover {
         border-color: rgb(0, 136, 204) !important;
@@ -254,7 +257,7 @@
         background: rgb(0,0,0) !important;
         border: 1px solid rgb(34,34,34) !important;
         box-shadow: 0px 3px 7px rgba(200, 200, 200, 0.2) inset !important;
-        color: rgb(68,68,68) !important;
+        color: rgb(135,135,135) !important;
     }
     .thread>.opContainer>.op .subject:not(:empty) {
         background: -moz-linear-gradient(center top , rgb(16, 16, 16), rgb(36, 36, 36)) repeat scroll 0% 0% transparent !important;
@@ -264,7 +267,7 @@
         box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.2) !important; 
     }
     #imgControls>label::after {
-        background: -moz-linear-gradient(center top , rgb(114, 114, 114), rgb(21, 19, 19)) repeat scroll 0% 0% transparent !important;
+        background: -moz-linear-gradient(center top , rgb(80, 150, 150), rgb(21, 19, 19)) repeat scroll 0% 0% transparent !important;
         color: rgb(255, 255, 255) !important;
         text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.2);
         box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) !important; 
