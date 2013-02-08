@@ -80,7 +80,7 @@
         text-shadow: 0px -1px 0px rgba(255, 255, 255, 0.25) !important;
         background-image: linear-gradient(to bottom, rgb(120, 200, 200), rgb(80, 150, 150)) !important;
         background-repeat: repeat-x !important;
-        border-color: rgba(255, 255, 255, 0.1) rgba(255, 255, 255, 0.1) rgba(255, 255, 255, 0.25) !important;
+        border-color: rgba(150, 150, 150, 0.1) rgba(255, 255, 255, 0.1) rgba(255, 255, 255, 0.25) !important;
         background-color: rgb(120, 200, 200) !important;
     }
     form>h1>a:hover {
@@ -90,49 +90,60 @@
         border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) !important;
     }
     #globalMessage {
-        background-color: rgb(255,255,255) !important;
-        border: 1px solid rgb(217,217,217) !important;
-        color: rgb(0,0,0) !important;
+        background-color: rgb(0,0,0) !important;
+        border: 1px solid rgb(38,38,38) !important;
+        color: rgb(255,255,255) !important;
     }
     #hideBtn>a:first-of-type::after {
-        color: rgb(0,0,0) !important;
+        color: rgb(255,255,255) !important;
     }
     input::-moz-placeholder, textarea::-moz-placeholder {
-        color: rgb(153, 153, 153) !important;
+        color: rgb(255,255,255) !important;
     }
-    textarea:not(:focus), .field:not(:focus), #qr [type=file] [type=text]:not(:focus) {
+    textarea:not(:focus), .field:not(:focus), #qr [type="file"] [type="text"]:not(:focus) {
         border: 1px solid rgb(204, 204, 204) !important;
+        color: rgb(255,255,255) !important;
     }
-    #qr [type=file] [type=text]:focus {
-        border: 1px solid rgba(82, 168, 236, 0.8) !important; 
+    #qr [type="file"] {
+    width: 74% !important;
     }
-    textarea, .field, #qr [type=file] [type=text] {
-        background-color: rgba(255, 255, 255, 1) !important;
+    #qr [type="submit"] {
+    width: 26% !important;
     }
-    select, textarea:not(:focus), .field:not(:focus), #qr [type=file] [type=text]:not(:focus) {
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset !important;
-        background-color: rgba(255, 255, 255, 1) !important;
+    #qr [type="file"] [type="text"]:focus {
+        border: 1px solid rgba(80, 150, 150, 0.8) !important; 
+        color: rgb(255,255,255) !important;
     }
-    textarea:focus, .field:focus, #qr [type=file] [type=text]:focus {
-        border-color: rgba(82, 168, 236, 0.8) !important;
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(82, 168, 236, 0.6);
+    textarea, .field, #qr [type="file"] [type="text"] {
+        background-color: rgba(0, 0, 0, 1) !important;
+        color: rgb(255,255,255) !important;
     }
-    input[type="submit"]:hover, #dump:hover, #qr [type=file] [type=button]:hover {
-        background-color: rgb(230, 230, 230) !important; 
-        color: rgb(51, 51, 51) !important;
+    select, textarea:not(:focus), .field:not(:focus), #qr [type="file"] [type="text"]:not(:focus) {
+        box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.075) inset !important;
+        background-color: rgba(0, 0, 0, 1) !important;
+        color: rgb(255,255,255) !important;
+    }
+    textarea:focus, .field:focus, #qr [type="file"] [type="text"]:focus {
+        border-color: rgba(80, 150, 150, 0.8) !important;
+        box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.075) inset, 0px 0px 8px rgba(80, 150, 150, 0.6);
+    }
+    input[type="submit"]:hover, #dump:hover, #qr [type="file"] [type="button"]:hover {
+        background-color: rgb(20, 20, 20) !important; 
+        color: rgb(200, 200, 200) !important;
     }
     input[type="submit"]:hover, #dump:hover, input[type="submit"]:active, input[type="submit"].active, input[type="submit"].disabled, input[type="submit"][disabled] {
-        background-color: rgb(230, 230, 230) !important;
+        background-color: rgb(20, 20, 20) !important;
     }
-    input[type="submit"], #dump, #qr [type=file] [type=button] {
-        border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25) !important;
-        background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(230, 230, 230)) !important;
+    input[type="submit"], #dump, #qr [type="file"] [type="button"] {
+        border-color: rgba(255, 255, 255, 0.15) rgba(255, 255, 255, 0.15) rgba(255, 255, 255, 0.25) !important;
+        background-image: linear-gradient(to bottom, rgb(25, 25, 25), rgb(0, 0, 0)) !important;
         text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75) !important;
-        box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2) inset, 0px 1px 2px rgba(0, 0, 0, 0.05) !important;
+        box-shadow: 0px 1px 0px rgba(30, 30, 30, 0.2) inset, 0px 1px 2px rgba(220, 220, 220, 0.05) !important;
+        color: rgb(255,255,255) !important;
     }
     #qr {
         box-shadow: 1px 3px 10px 6px rgba(50,50,50,0.1) !important;
-        background-color: rgba(220,220,220,1) !important;
+        background-color: rgba(0,0,0,1) !important;
     }
     #qr .move {
         color: transparent !important;
@@ -184,6 +195,9 @@
         box-shadow: 0px 3px 8px rgba(255, 255, 255, 0.125) inset;
         color: rgb(255,255,255) !important;
     }
+    .op .fileInfo a {
+        color: rgb(255,255,255) !important;
+        }
     #qp .op .fileInfo {
         color: rgb(255,255,255) !important;
     }
@@ -638,10 +652,11 @@
     .op .menu_button span {
         position: relative !important;
         top: -4px !important;
+        left: -2px !important;
     }
     .replyContainer>.reply .fileInfo {
         width: 100% !important;
-        text-align: right !important;
+        text-align: left !important;
         margin-left: 0px !important;
         font-size: 11px !important;
         height: 13px !important;
