@@ -45,8 +45,8 @@
         color: rgb(250,250,250) !important;
     }
     #stats {
-        border-left: 1px solid rgb(230,230,230) !important;
-        color: rgb(153,153,153) !important;
+        border-left: 1px solid rgb(120,200,200) !important;
+        margin-top: -2px !important
     }
     #updater:not(:hover) .move {
         color: transparent !important;
@@ -249,21 +249,28 @@
         border-left-color: rgb(80,150,150) !important;
     }
     .pagelist {
-        background-color: rgb(255,255,255) !important;
-        border: 1px solid rgb(204,204,204) !important;
+        background-color: rgb(0,0,0) !important;
+        border: 1px solid rgb(51,51,51) !important;
+        width: 36% !important;
+        position: relative !important;
+        padding-top: 20px !important;
+        left: 22% !important;
     }
+    .pagelist, .pagelist.prev, .pagelist.pages {
+        float: none !important;
+        }
     .pages>a, .pages>strong {
-        border-left: 1px solid rgb(204,204,204) !important;
-        border-right: 1px solid rgb(204,204,204) !important;
+        border-left: 1px solid rgb(51,51,51) !important;
+        border-right: 1px solid rgb(51,51,51) !important;
     }
     .pages>a {
-       color: rgb(0, 136, 204) !important; 
+       color: rgb(80, 150, 150) !important; 
     }
     .pages>a:hover {
-        color: rgb(0, 85, 128) !important;
+        color: rgb(40, 75, 75) !important;
     }
     .prev span::after, .next span::after, .pages strong {
-        color: rgb(0,0,0) !important;
+        color: rgb(120,200,200) !important;
     }
     #overlay {
         background: none repeat scroll 0% 0% rgba(25, 25, 25, 0.6) !important;
@@ -293,9 +300,12 @@
     }
     #watcher:not(:hover) {
         border-left: 1px solid rgb(120,200,200) !important;
+        position: fixed !important;
+        right: 70px !important;
     }
-    #watcher .move {
-        color: rgb(200,200,200) !important;
+    #watcher.reply {
+        position: fixed !important;
+        right: 70px !important;
     }
     #watcher:hover {
         background: rgba(10,10,10,0.7) !important;
@@ -619,7 +629,8 @@
         padding: 0px !important;
     }
     .inline .post {
-        background: white !important;
+        background: black !important;
+        color: white !important;
     }
     .thread>.replyContainer>div.reply {
         position: relative !important;
@@ -736,6 +747,9 @@
         font-size: 13px !important;
         content: "<<" !important;
     }
+    .next input {
+        color: rgb(120,200,200) !important;
+        }
     .next span::after {
         font-size: 13px !important;
         content: ">>" !important;
@@ -751,6 +765,7 @@
     .cataloglink {
         padding-left: 0px !important;
         margin-left: -5px !important;
+        border-left: none !important;
     }
     #qr [type=file] {
         margin-bottom: -6px !important;
@@ -804,6 +819,7 @@
     #imageType {
         position: relative;
         bottom: 1px;
+        color: rgb(0,0,0) !important;
     }
     #ihover, #qp {
         z-index: 100 !important;
