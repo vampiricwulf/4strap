@@ -206,28 +206,32 @@
         box-shadow: 0px 1px 3px rgba(255, 255, 255, 0.055) !important;
     }
     .fileThumb:hover {
-        border-color: rgb(0, 136, 204) !important;
+        border-color: rgb(120, 200, 200) !important;
         box-shadow: 0px 1px 4px rgba(0, 105, 214, 0.25) !important;
     }
     #menu, .subMenu {
-        background-color: rgb(255,255,255) !important;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2) !important;     
-        border: 1px solid rgba(0, 0, 0, 0.2) !important;
+        background-color: rgb(0,0,0) !important;
+        box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.2) !important;     
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        border-radius: 4px !important;
+        padding: 4px 0px !important;
+        margin: 2px 0px 0px !important;
+    }
+    .entry {
+        color: rgb(80, 150, 150) !important;
+        border-bottom: none !important;
+        padding: 1px 8px !important;
+        padding-bottom: 3px !important;
     }
     .entry:hover {
-        color: rgb(255, 255, 255) !important;
-        background-color: rgb(0, 129, 194) !important;
-        background-image: linear-gradient(to bottom, rgb(0, 136, 204), rgb(0, 119, 179)) !important;
-        background-repeat: repeat-x !important;
+        color: rgb(80, 150, 150) !important;
+        background-color: rgb(50, 50, 50) !important;
     }
     .subMenu>.entry:hover:first-of-type {
-        box-shadow: -1px 0px 0px rgb(0, 119, 179) !important;
+        box-shadow: -1px 0px 0px rgb(100, 100, 100) !important;
     }
     .hasSubMenu::after {
-        border-left-color: rgb(204,204,204) !important;
-    }
-    .entry:hover::after {
-        border-left-color: rgb(255,255,255) !important;
+        border-left-color: rgb(80,150,150) !important;
     }
     .pagelist {
         background-color: rgb(255,255,255) !important;
@@ -696,18 +700,8 @@
     a.useremail, a.useremail>span {
         vertical-align: top !important;
     }
-    #menu, .subMenu {
-        border-radius: 4px !important;
-        padding: 4px 0px !important;
-        margin: 2px 0px 0px !important;
-    }
     .subMenu {
         top: -7px !important;
-    }
-    .entry {
-        border-bottom: none !important;
-        padding: 1px 8px !important;
-        padding-bottom: 3px !important;
     }
     a.useremail::before {
         position: relative !important;
