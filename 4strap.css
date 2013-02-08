@@ -3,7 +3,15 @@
 @-moz-document domain("4chan.org") {
     
     /* Colors */
-
+    #order-ctrl, #size-ctrl, #teaser-ctrl, #content select {
+        color: black !important;
+    }
+    #content option {
+        color: white !important;
+    }
+    .btn-wrap .button {
+        color: rgb(80,150,150) !important;
+    }
     .flashListing tr:nth-of-type(2n+1) {
         background: rgb(30,30,30) !important;
         }
@@ -30,7 +38,10 @@
     }
     a:visited {
         color: rgb(80,150,255) !important;
-        }
+    }
+    a:visited:hover {
+        color: rgb(40,75,127) !important;
+    }
     #boardNavDesktop {
         box-shadow: 18px 0px 10px 3px rgba(10,10,10,0.2) !important;
         background-color: rgba(0, 0, 0,0.4) !important;
@@ -73,7 +84,7 @@
     div.boardBanner > div.boardTitle {
         color: rgb(255,255,255) !important;
         text-shadow: 1px 1px 1px rgb(0, 0, 0) !important;
-        background-color: rgba(0,0,0,0.3) !important;
+        background: rgba(0,0,0,0.3) !important;
     }
     form>h1>a {
         color: rgb(255, 255, 255) !important;
@@ -223,12 +234,12 @@
         background: rgb(242, 222, 222) !important;
         border: 1px solid rgba(238, 50, 50,0.3) !important;
     }
-    .fileThumb {
+    .fileThumb, .thumb {
         border: 1px solid rgb(221, 221, 221) !important;
         box-shadow: 0px 1px 3px rgba(255, 255, 255, 0.055) !important;
         transition: all 0.2s ease-in-out 0s !important; 
     }
-    .fileThumb:hover {
+    .fileThumb:hover, .thumb:hover {
         border-color: rgb(120, 200, 200) !important;
         box-shadow: 0px 1px 4px rgba(80, 150, 150, 0.25) !important;
     }
@@ -281,8 +292,11 @@
         background: none repeat scroll 0% 0% rgba(25, 25, 25, 0.6) !important;
     }
     #options {
-        background: rgb(255,255,255) !important;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4) !important; 
+        background: rgb(0,0,0) !important;
+        box-shadow: 0px 5px 10px rgba(80, 150, 150, 0.4) !important; 
+    }
+    #optionsbar {
+        border-bottom: 1px solid white !important;
     }
     a.summary {
         background: rgb(0,0,0) !important;
@@ -505,11 +519,12 @@
         margin-bottom: 10px !important;
     }
     #hideBtn {
+        padding-top: 10px !important;
         font-size: 0px !important;
         position: relative !important;
         width: 80px !important;
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
     #hideBtn a {
         font-size: 11px !important;

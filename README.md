@@ -7,7 +7,8 @@ TODO
 ======
 
 * ~~Left-Justify all Replies (Ask Seaweed for help)~~
-* Fix Catalog
+* ~~Fix Catalog~~
 * Fix ExLinks
 * ~~Fix Pages~~?
+* ~~Fix 4chan-x menu~~
 * Fix Everything I Can
