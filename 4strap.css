@@ -251,14 +251,13 @@
     .pagelist {
         background-color: rgb(0,0,0) !important;
         border: 1px solid rgb(51,51,51) !important;
-        width: 36% !important;
         position: relative !important;
         padding-top: 20px !important;
         left: 22% !important;
     }
     .pagelist, .pagelist.prev, .pagelist.pages {
-        float: none !important;
-        }
+        float: left !important;
+    }
     .pages>a, .pages>strong {
         border-left: 1px solid rgb(51,51,51) !important;
         border-right: 1px solid rgb(51,51,51) !important;
@@ -759,13 +758,9 @@
         padding: 10px !important;
         margin-left: -1px !important;
     }
-    .next {
-        float: right !important;
-    }
     .cataloglink {
         padding-left: 0px !important;
-        margin-left: -5px !important;
-        border-left: none !important;
+        margin-left: 3px !important;
     }
     #qr [type=file] {
         margin-bottom: -6px !important;
