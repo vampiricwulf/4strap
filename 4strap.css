@@ -4,10 +4,6 @@
     
     /* Colors */
 
-    .thread>.replyContainer>.reply:target, .thread>.replyContainer>.reply.highlight {
-        border: 3px solid rgb(150,150,150) !important;
-        border-radius: 4px !important;
-    }
     #doc li {
         background: none !important;
     }
@@ -227,7 +223,7 @@
         margin-top: -10px !important;
         padding-bottom: 10px !important;
     }
-    .board>.thread:nth-of-type(2n) {
+    .board>.thread:nth-of-type(2n), .thread>.replyContainer>.reply:target, .thread>.replyContainer>.reply.highlight {
         border: 3px solid rgb(150,150,150) !important;
         border-radius: 4px !important;
     }
