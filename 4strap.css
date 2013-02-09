@@ -4,6 +4,11 @@
     
     /* Colors */
 
+    .exblock {
+        background: black !important;
+        border: 3px solid rgb(150,150,150) !important;
+        border-radius: 4px !important;
+    }  
     #doc li {
         background: none !important;
     }
@@ -76,17 +81,17 @@
     }
     .flashListing tr:nth-of-type(2n+1) {
         background: rgb(30,30,30) !important;
-        }
+    }
         
     .flashListing .postblock {
         background: rgb(50,50,50) !important;
         color: rgb(255,255,255) !important;
         border: 1px solid rgb(80,150,150) !important;;
-        }
+    }
 
     .flashListing .highlightPost {
         background: rgb(50,50,50) !important;
-        }
+    }
     
     body {
         background: rgb(0,0,0) !important;
