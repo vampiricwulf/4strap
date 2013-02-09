@@ -3,15 +3,24 @@
 @-moz-document domain("4chan.org") {
     
     /* Colors */
-    #preview-tooltip-ws {
+
+    #doc li {
+        background: none !important;
+    }
+    #preview-tooltip-ws, #doc h3 {
         background: black !important;
         color: white !important;
         border: 1px solid white !important;
     }
-    #preview-tooltip-ws h2 {
+    #preview-tooltip-ws h2, #what4chan {
         background: black !important;
         color: white !important;
         border-bottom: 1px solid white !important;
+    }
+    #doc dt:not(#what4chan) {
+        color: white !important;
+        border-bottom: 1px solid white !important;
+        border-top: 1px solid white !important;
     }
     #preview-tooltip-ws .p_filetitle {
         color: rgb(100,200,200) !important;
@@ -24,10 +33,6 @@
         color: white !important;
         content: " ▼" !important;
     }
-    #filtermenu .bd {
-        color: white !important;
-        background: black !important;
-    }
     #filtermenu .yuimenuitemlabel:hover {
         background: white !important;
         color: black !important;
@@ -37,7 +42,7 @@
         border-bottom: 1px solid rgb(255,255,255) !important;
         color: white !important;
     }
-    .boxcontent, .box-outer {
+    .boxcontent, .box-outer, #filtermenu .bd, #ft li, #doc p {
         background: black !important;
         color: white !important;
     }
