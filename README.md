@@ -11,4 +11,5 @@ TODO
 * Fix ExLinks
 * ~~Fix Pages~~?
 * ~~Fix 4chan-x menu~~
+* Fix main page
 * Fix Everything I Can
