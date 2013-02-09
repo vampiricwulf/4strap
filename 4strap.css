@@ -65,11 +65,14 @@
     #order-ctrl, #size-ctrl, #teaser-ctrl, #content select {
         color: black !important;
     }
-    #content option, #imageType option {
+    #content option, #imageType option, #qr .move option {
         color: white !important;
     }
     .btn-wrap .button {
         color: rgb(80,150,150) !important;
+    }
+    #qr .move select {
+        color: black !important;
     }
     .flashListing tr:nth-of-type(2n+1) {
         background: rgb(30,30,30) !important;
@@ -217,6 +220,8 @@
     }
     #qr .move {
         color: transparent !important;
+        margin-top: -10px !important;
+        padding-bottom: 10px !important;
     }
     .board>.thread:nth-of-type(2n) {
     border-top: 5px solid rgb(80,150,150) !important;
@@ -411,7 +416,6 @@
     #qp .menu_button,
     iframe,
     #imgControls>label input,
-    #qr .move select,
     .reply:not(:hover) .backlink.filtered,
     .postingMode ~ #watcher,
     #watcher:not(:hover)>div:not(.move) {
