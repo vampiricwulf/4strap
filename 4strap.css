@@ -844,9 +844,6 @@
         position: relative !important;
         top: 3px !important;
     }
-    .op .postInfo {
-    display: block !important;
-    }
     #imgControls>label {
         font-size: 0px !important;
     }
