@@ -158,13 +158,19 @@
     .qphl {
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2) !important;
     }
+    #post-preview {
+        background-color: rgb(255,255,255) !important;
+        color: rgb(0,0,0) !important;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2) !important;
+        border: 1px solid rgba(0,0,0, 0.1) !important;
+    }
     a.quotelink {
         color: rgb(0, 136, 204) !important;
     }
     a.quotelink:hover {
         color: rgb(0, 85, 128) !important;
     }
-    .name, .postertrip {
+    .name, .postertrip, .post-author {
         color: rgb(90,90,90) !important;
     }
     .replyContainer>div.reply>div.postInfo {
@@ -208,11 +214,11 @@
         background: rgb(242, 222, 222) !important;
         border: 1px solid rgba(238, 50, 50,0.3) !important;
     }
-    .fileThumb {
+    .fileThumb, .thumb {
         border: 1px solid rgb(221, 221, 221) !important;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.055) !important;
     }
-    .fileThumb:hover {
+    .fileThumb:hover, .thumb:hover {
         border-color: rgb(0, 136, 204) !important;
         box-shadow: 0px 1px 4px rgba(0, 105, 214, 0.25) !important;
     }
@@ -694,7 +700,7 @@
     .fileInfo>a {
         margin-right: 10px !important;
     }
-    .reply .fileThumb {
+    .reply .fileThumb, .thumb {
         margin-top: 6px !important;
     }
     .warning:not(:empty) {
@@ -707,10 +713,10 @@
         padding: 3px !important;
         text-align: center;
     }
-    .fileThumb, .fileThumb img {
+    .fileThumb, .fileThumb img, .thumb {
         border-radius: 4px !important;
     }
-    .fileThumb {
+    .fileThumb, .thumb {
         transition: all 0.2s ease-in-out 0s !important;    
     }
     a.useremail, a.useremail>span {
