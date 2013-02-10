@@ -90,20 +90,6 @@
     #qr .move select {
         color: black !important;
     }
-    .flashListing tr:nth-of-type(2n+1) {
-        background: rgb(30,30,30) !important;
-    }
-        
-    .flashListing .postblock {
-        background: rgb(50,50,50) !important;
-        color: rgb(255,255,255) !important;
-        border: 1px solid rgb(80,150,150) !important;;
-    }
-
-    .flashListing .highlightPost {
-        background: rgb(50,50,50) !important;
-    }
-    
     body {
         background: rgb(0,0,0) !important;
         color: rgb(240,240,240) !important;
@@ -150,10 +136,10 @@
         border-bottom: 1px solid rgb(120,200,200) !important;
         color: rgb(250,250,250) !important;
     }
-    .settingsWindowLink::after {
+    .settingsWindowLink::after, #topnav #settingsWindowLink::after {
         color: rgb(200,200,200) !important;
     }
-    .settingsWindowLink:hover::after {
+    .settingsWindowLink:hover::after, #topnav #settingsWindowLink:hover::after {
         color: rgb(255,255,255) !important;
     }
     div.boardBanner > div.boardTitle {
@@ -255,13 +241,19 @@
     .qphl {
         box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.2) !important;
     }
-    a.quotelink {
+    #post-preview {
+        background-color: rgb(0,0,0) !important;
+        color: rgb(255,255,255) !important;
+        box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.2) !important;
+        border: 1px solid rgba(150,150,150, 0.8) !important;
+    }
+    a.quotelink, .next form::after, .prev form::after, .flashListing a {
         color: rgb(100, 170, 100) !important;
     }
-    a.quotelink:hover {
+    a.quotelink:hover, .next:hover form::after, .prev:hover form::after, .flashListing a:hover {
         color: rgb(0, 255, 0) !important;
     }
-    .name, .postertrip {
+    .name, .postertrip, .post-author {
         color: rgb(80,220,80) !important;
     }
     .replyContainer>div.reply>div.postInfo {
@@ -369,7 +361,7 @@
     #overlay {
         background: none repeat scroll 0% 0% rgba(25, 25, 25, 0.6) !important;
     }
-    #options {
+    #options, #theme {
         background: rgb(0,0,0) !important;
         box-shadow: 0px 5px 10px rgba(80, 150, 150, 0.4) !important; 
         border-radius: 4px !important;
@@ -377,11 +369,18 @@
     #optionsbar {
         border-bottom: 1px solid white !important;
     }
-    a.summary {
+    .summary {
         background: rgb(0,0,0) !important;
         border: 1px solid rgb(34,34,34) !important;
         box-shadow: 0px 3px 7px rgba(200, 200, 200, 0.2) inset !important;
         color: rgb(135,135,135) !important;
+    }
+    .summary > a {
+        color: rgb(187,187,187) !important;
+        font-weight: bold !important;
+    }
+    .summary > a:hover {
+        color: rgb(147,147,147) !important;
     }
     .thread>.opContainer>.op .subject:not(:empty) {
         background: -moz-linear-gradient(center top , rgb(16, 16, 16), rgb(36, 36, 36)) repeat scroll 0% 0% transparent !important;
@@ -410,16 +409,40 @@
         border: 1px solid rgb(20,20,20) !important;
         box-shadow: 0px 5px 10px rgba(210, 210, 210, 0.2) !important; 
     }
+    .panelHeader {
+        border-color: rgb(230,230,230) !important;
+    }
+    #delform hr {
+        border-color: transparent !important;
+    }
+    .flashListing tr:nth-of-type(2n+1) {
+        background: rgb(30,30,30) !important;
+    }
+        
+    .flashListing .postblock {
+        background: rgb(50,50,50) !important;
+        color: rgb(255,255,255) !important;
+        border: 1px solid rgb(80,150,150) !important;;
+    }
+
+    .flashListing .highlightPost {
+        background: rgb(50,50,50) !important;
+    }
+    .flashListing .subject {
+        color: rgb(255,50,50) !important;
+    }
 
     /* Layout */
     
     #absbot, 
     .replyContainer>.reply input, 
     #navbotright,
-    hr, .deleteform, 
+    body > hr,
+    .deleteform, 
     .stylechanger, 
+    #styleSwitcher,
     #dump,
-    .navLinks, 
+    .navLinks.desktop, 
     .postingMode,
     .toggleCatalog,
     #navtopright a[target],
@@ -432,7 +455,9 @@
     #imgControls>label input,
     .reply:not(:hover) .backlink.filtered,
     .postingMode ~ #watcher,
-    #watcher:not(:hover)>div:not(.move) {
+    #watcher:not(:hover)>div:not(.move),
+    #topnav #first-run,
+    #hideBtn {
         display: none !important;
     }
     .replyContainer>.reply>.postInfo {
@@ -538,15 +563,15 @@
         top: 4px !important;
         letter-spacing: 0px !important;
     }
-    .settingsWindowLink {
+    .settingsWindowLink, #topnav #settingsWindowLink {
         font-size: 0px !important;
         height: 18px !important;
     }
-    .settingsWindowLink::before {
+    .settingsWindowLink::before, #topnav #settingsWindowLink::before {
         content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAA/BJREFUOE9jYCARaOVKK8v4CIsCtTES1CqSzmshlMGTLxjD7SooyMWBrkEkk88pZLbzL4tW3ft8hpwmovH8MgZOCjxYDRfPF6pMXOr9t3lP4v+0Ff7/pDJF17PyM4NcAgOMOnUqW/qOpPxv35/4XzJH5Ib7ZOsfujWql/iUOVXRDWU0bNA8Vr41/H/JZt//pZv9/qev9PsvEMwzBaiQC2ois32v8bPSLf5g+bglTv9LtwT+z18X8p/bnb0fqAbhI4MkZXaJLKFFFt3aQIX2/2OX2P1PXOb836JN7wu3FIcl1HYWsw7dd/FLHcDyMJy1JvA/ixvzZqAaIbDFiYkejNLFEkusegz/m3er/zfuVIZj+36T/5we7NOByjiBmMWwSfOBWZcaXN4CqN6qy/Afpzp7O1CeG2ygR6gxm3Kl4l35Ktn/PHmc/zlz2P9z5bL/583n+q9YLfdfKVf+NlCZIhAzyRVLHxQuEgCqYfsvXir6X75C7i+3HecuoJwJSB4e2EKOPE7iiSKHVcoUPmpUq/xUq1T6oVwk/0EiXuw2tz3HaqBCNZC3+VK5+zym2P/XbdL4J5Ui/pRLgx0UxsZAzIqeIkCmi7KxsZgKiHL78PJz+jIyMjgAxXSBWALkXZAG8QhBa74Anm3c6hwdzMxMLkAhEWSXoRsKdzE0ErAlXGagnDA0vOBexGUQirhGnqyUUCpfEFAQPYEzamjIMhsba4BcDTIUf47RyVXiky4W6wyZ7fjZf7rDLz4lLjeQJslcYRfFcpn5Vu36x+17je4695s+ALLPSeWKThXzFQAFDcj1qEAxT0rVoFn9au2O2P9t+6P/V2+PASZaDnCyEczka+w6kPW/40AcMKdEg+U7gezWfYn/bTqN3grr8cHSK8RQvQIlfr0mtdslm4L/5673BOOyLSH/ZVIkzgGlpcSiBW3C5jn/g8mB6DyoGut2w5/c0hwJKK7ky+TOsu0z+a/fKg/HRu3K/zXLVd8CFRqKiwtwaNWoXLHq0YLLm3dp/lfMkn7DoczWA1SjhBKerMksLXKVcv8Z0xn/s2Sy/GdIY/jPlM70X7JI8gdQoSNIMX8kT6J8lfx/pgwmsLxAgcB/2RyZlywszKC0iBo5otGCjgpV8n8VqhX+CwIVChcJ/2fNZP0vXyj3CWYgOzsrp0iy0HLFasX/0hXSwJyk+F80QeQBIyOjOUaEMDMzsHH7c5ZLp0he4THkmitRJPFep0nnP18A71mgYk2YBg5eNiFeN+4K7kDOvVwOnGvZeFijgHJ8uNIiO1BCFohF+E157Lg9OOdyCLHHAPmwIgymD5TVQAkcVMJgZDtchoMSLcggkCVEAwAmfD6sSOi/rgAAAABJRU5ErkJggg==') !important;
         position: absolute !important;
     }
-    .settingsWindowLink::after {
+    .settingsWindowLink::after, #topnav #settingsWindowLink::after {
         content: "4chan";
         font-size: 15px !important;
         position: absolute !important;
@@ -587,7 +612,7 @@
         background-image: none !important;
         transition: background-position 0.1s linear 0s !important;
     }
-    a:not(.filtered) {
+    a:not(.filtered), .button {
         text-decoration: none !important;
     }
     #globalMessage * {
@@ -679,15 +704,24 @@
         border-radius: 4px !important;
         z-index: 4 !important;
     }
-    #qr .close {
+    #qr .close, #theme-close {
         position: absolute !important;
-        top: 1px !important;
-        left: 0px !important;
         height: 21.5px !important;
         z-index: 15 !important;
         font-size: 0px !important;
         width: 22px !important;
         background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAVCAYAAABCIB6VAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAABIVJREFUSEt9VWkspWcYtdXY1zEYjZJWB1HbIETRSGiVBsGPkoyKJkgkEsTyw1JbjS0jYYJEhWsbYilKI5YfElftKoJo1BZMcdOQdMwUT8/z5d4bN3S+5Nx7v/d+73nPc57lU1JSvJRxqwZoALo6OjoPvb29raKjoz+Li4t7GhMT8zQ4ONjR2tr6Y/xvDhgDOsADQBXg/XcuFax8AGjxhvDw8CcikSh8fn4+f3t7W3RwcPDzzs5O79ra2k/Dw8NZ6enpIVZWVg549kPAENCUilIgl5FqQ83jjo6ObzY3N+uXl5dXenp6JAUFBW9TU1OvMzMzryoqKt6MjY29Xl1dnRkfHy+LjY39UlNT8xOQPpSK4ogFcln4rPRRe3t7ONSJh4aG/omKirqBKtLW1iZVVVVSV1cnfX19cnR0JBx0Mzs7K8EBfbAnCHtl5KycbRE+2FPjtra20L29vd+h6trS0lIgw/q94EN8fX0JtrxbXFwccXV1DZSSsy3sueCrfmhoqN3u7u4rKL4yNTX9X8LbB/HBPj4+tLCwcN7c3Pwc+7yknnNClR4YGxubDg4OPkNYf/r7+5OysrJA7OXlRQkJCWRiYiLcM5GTkxMlJSWRmZmZsMbKs7Ozr5HU6cjIyG+xZsvRM7E2FmyRrJrGxsYLPT09udq8vDw6PDyknJwcMjIyIhcXF0IyaWNjg/z8/OTPOTg4sOrXVVVVP4DPDXjMxPr5+fnex8fHI/Hx8f+qqanJN9jY2FBLSwvt7+9Ta2srTU5O0tHREaWkpAgJldmCiKmzs/MSUYuw5gdYMbFhZWVlgEQiEQcFBd3IbJBt4iROTEwQX+fn51RSUkJaWloKOeBD6urqbqampgaxj5Now8RGpaWlgaenp9MhISEKxOypm5sbicViuri4oLOzM6qvrydzc/M7xA0NDdcQMAC+r4BPBcVpaWm+CHckMTFRwQp3d3dCeIQSpPLycsHfk5MTKi4uJg5fFhUnt7u7+7Krq6vttmJ9VILj0tLSS/h4YWhoKN9QVFREaGNKTk4mAwMDsrW1paamJlpZWaGAgAD5c87OzoQu/QvJfn7bY23cWFZXVz9DZfwRFhZGKioqwia0NwUGBgolJVPHZYZOk/usoaFBZWVlVzMzM2IPD4/vb1cFd8kjOzs7V3SQaGBg4NLe3l5OLiO875uTGBERQRhUEpTkCyTxazwnr2Oh84CP4HUUVM8g3GsO730tjcFDmCWESnjb19c3bGFhEQMOD4CnndB58lmB5rDLyMj4Dh34G2r2DSaXMIR0dXUFOzhszgF3X2Fh4fXc3Nzf/f39v3p6eiaBxwfgQSSfFQrTDQ1iBw/DsOHl1tbWMjrqDEl9V1NTc4NSu+rt7b1cX19/jck2k5ub+wKlx0o/l5Ly6JRPN1Ytn8f4bYomeYLE+eKNEVtbW/vj6Ojoq+np6V8QxSDKqj0rK6uEEyX1lMO/dx4zMau+Tc4nWwL2Ut++wDd3FBd/AOAL8EzgRLGnRlKlPOSZ586l8M7Dv3yABWANcJtyR7E6K+C977z/AP97RDZsb7EeAAAAAElFTkSuQmCC') !important;
+    }
+    #qr .close {
+        top: 1px !important;
+        left: 0px !important;   
+    }
+    #theme:not(:hover) #theme-close {
+        opacity: 0 !important;
+    }
+    #theme-close {
+        top: -11px !important;
+        left: -10px !important; 
     }
     #qr .move {
         width: 105% !important;
@@ -715,6 +749,7 @@
     .boardBanner img {
         height: 90px !important;
         width: auto !important;
+        border: 1px solid rgb(80,150,150) !important;
     }
     .thread>.replyContainer>.reply {
         padding-left: 0px !important;
@@ -812,10 +847,10 @@
     span.container {
         margin-left: -2px !important;
     }
-    .fileInfo>a {
+    .reply .fileInfo>a:last-of-type {
         margin-right: 10px !important;
     }
-    .reply .fileThumb {
+    .reply .fileThumb, .thumb {
         margin-top: 6px !important;
     }
     .warning:not(:empty) {
@@ -828,6 +863,9 @@
     }
     .fileThumb, .fileThumb img, .thumb {
         border-radius: 4px !important;
+    }
+    .fileThumb, .thumb {
+        transition: all 0.2s ease-in-out 0s !important;    
     }
     a.useremail, a.useremail>span {
         vertical-align: top !important;
@@ -849,7 +887,7 @@
     }
     .pagelist {
         border-radius: 4px !important;
-        margin: 20px 10px 20px 100px !important;
+        margin: 0px 10px 20px 100px !important;
         padding: 0px !important; 
     }
     .pages, .prev span, .next span {
@@ -858,6 +896,8 @@
     .prev span::after {
         font-size: 13px !important;
         content: "<<" !important;
+        position: relative !important;
+        left: 1px !important;
     }
     .next input {
         color: rgb(120,200,200) !important;
@@ -865,11 +905,46 @@
     .next span::after {
         font-size: 13px !important;
         content: ">>" !important;
+        position: relative !important;
+        right: 2px !important;
     }
     .pages>a, .pages>strong {
         font-size: 13px !important;
         padding: 10px !important;
         margin-left: -1px !important;
+    }
+    .next {
+        float: right !important;
+    }
+    .next, .prev {
+        position: relative !important;
+        width: 23px !important;
+    }
+    .prev {
+        padding-right: 1px !important;
+    }
+    .next input, .next input:hover, .prev input, .prev input:hover {
+        font-size: 0px !important;
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    .next form::after {
+        content: ">>";
+        left: 2px !important;
+    }
+    .prev form::after {
+        content: "<<";
+        left: 5px !important;
+    }
+    .next form::after, .prev form::after {
+        font-size: 13px !important;
+        pointer-events: none !important;
+        position: absolute !important;
+        top: 4px !important;
+    }
+    .next:hover form::after, .prev:hover form::after {
+        cursor: pointer !important;
     }
     .cataloglink {
         padding-left: 0px !important;
@@ -880,10 +955,13 @@
         margin-top: -2px !important;
         height: 27px !important;
     }
+    #options, #theme {
+        border-radius: 4px !important;
+    }
     #options label {
         text-decoration: none !important;
     }
-    a.summary {
+    .summary {
         font-size: 11px !important;
         position: relative;
         left: 35px;
@@ -905,6 +983,17 @@
         right: 8px;
         display: table !important;
         width: auto !important;
+
+    }
+    .favicon ~ .subject:not(:empty) {
+        float: left !important;
+    }
+    .favicon ~ .menu_button span {
+        top: -3px !important;
+    }
+    .favicon {
+        position: relative !important;
+        top: 3px !important;
     }
     #imgControls>label {
         font-size: 0px !important;
