@@ -74,10 +74,10 @@
         border-bottom: 1px solid rgb(210, 105, 17) !important;
         color: rgb(0,0,0) !important;
     }
-    .settingsWindowLink::after {
+    .settingsWindowLink::after, #topnav #settingsWindowLink::after {
         color: rgb(153,153,153) !important;
     }
-    .settingsWindowLink:hover::after {
+    .settingsWindowLink:hover::after, #topnav #settingsWindowLink:hover::after {
         color: rgb(0,0,0) !important;
     }
     div.boardBanner > div.boardTitle {
@@ -256,7 +256,7 @@
     #overlay {
         background: none repeat scroll 0% 0% rgba(25, 25, 25, 0.6) !important;
     }
-    #options {
+    #options, #theme {
         background: rgb(255,255,255) !important;
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4) !important; 
     }
@@ -290,6 +290,9 @@
         border: 1px solid rgb(230,230,230) !important;
         box-shadow: 0px 5px 10px rgba(40, 40, 40, 0.2) !important; 
     }
+    .panelHeader {
+        border-color: rgb(230,230,230) !important;
+    }
 
     /* Layout */
     
@@ -299,7 +302,7 @@
     hr, .deleteform, 
     .stylechanger, 
     #dump,
-    .navLinks, 
+    .navLinks.desktop, 
     .postingMode,
     .toggleCatalog,
     #navtopright a[target],
@@ -313,7 +316,8 @@
     #qr .move select,
     .reply:not(:hover) .backlink.filtered,
     .postingMode ~ #watcher,
-    #watcher:not(:hover)>div:not(.move) {
+    #watcher:not(:hover)>div:not(.move),
+    #topnav #first-run {
         display: none !important;
     }
     .replyContainer>.reply>.postInfo {
@@ -406,15 +410,15 @@
         top: 4px !important;
         letter-spacing: 0px !important;
     }
-    .settingsWindowLink {
+    .settingsWindowLink, #topnav #settingsWindowLink {
         font-size: 0px !important;
         height: 18px !important;
     }
-    .settingsWindowLink::before {
+    .settingsWindowLink::before, #topnav #settingsWindowLink::before {
         content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAA/BJREFUOE9jYCARaOVKK8v4CIsCtTES1CqSzmshlMGTLxjD7SooyMWBrkEkk88pZLbzL4tW3ft8hpwmovH8MgZOCjxYDRfPF6pMXOr9t3lP4v+0Ff7/pDJF17PyM4NcAgOMOnUqW/qOpPxv35/4XzJH5Ib7ZOsfujWql/iUOVXRDWU0bNA8Vr41/H/JZt//pZv9/qev9PsvEMwzBaiQC2ois32v8bPSLf5g+bglTv9LtwT+z18X8p/bnb0fqAbhI4MkZXaJLKFFFt3aQIX2/2OX2P1PXOb836JN7wu3FIcl1HYWsw7dd/FLHcDyMJy1JvA/ixvzZqAaIbDFiYkejNLFEkusegz/m3er/zfuVIZj+36T/5we7NOByjiBmMWwSfOBWZcaXN4CqN6qy/Afpzp7O1CeG2ygR6gxm3Kl4l35Ktn/PHmc/zlz2P9z5bL/583n+q9YLfdfKVf+NlCZIhAzyRVLHxQuEgCqYfsvXir6X75C7i+3HecuoJwJSB4e2EKOPE7iiSKHVcoUPmpUq/xUq1T6oVwk/0EiXuw2tz3HaqBCNZC3+VK5+zym2P/XbdL4J5Ui/pRLgx0UxsZAzIqeIkCmi7KxsZgKiHL78PJz+jIyMjgAxXSBWALkXZAG8QhBa74Anm3c6hwdzMxMLkAhEWSXoRsKdzE0ErAlXGagnDA0vOBexGUQirhGnqyUUCpfEFAQPYEzamjIMhsba4BcDTIUf47RyVXiky4W6wyZ7fjZf7rDLz4lLjeQJslcYRfFcpn5Vu36x+17je4695s+ALLPSeWKThXzFQAFDcj1qEAxT0rVoFn9au2O2P9t+6P/V2+PASZaDnCyEczka+w6kPW/40AcMKdEg+U7gezWfYn/bTqN3grr8cHSK8RQvQIlfr0mtdslm4L/5673BOOyLSH/ZVIkzgGlpcSiBW3C5jn/g8mB6DyoGut2w5/c0hwJKK7ky+TOsu0z+a/fKg/HRu3K/zXLVd8CFRqKiwtwaNWoXLHq0YLLm3dp/lfMkn7DoczWA1SjhBKerMksLXKVcv8Z0xn/s2Sy/GdIY/jPlM70X7JI8gdQoSNIMX8kT6J8lfx/pgwmsLxAgcB/2RyZlywszKC0iBo5otGCjgpV8n8VqhX+CwIVChcJ/2fNZP0vXyj3CWYgOzsrp0iy0HLFasX/0hXSwJyk+F80QeQBIyOjOUaEMDMzsHH7c5ZLp0he4THkmitRJPFep0nnP18A71mgYk2YBg5eNiFeN+4K7kDOvVwOnGvZeFijgHJ8uNIiO1BCFohF+E157Lg9OOdyCLHHAPmwIgymD5TVQAkcVMJgZDtchoMSLcggkCVEAwAmfD6sSOi/rgAAAABJRU5ErkJggg==') !important;
         position: absolute !important;
     }
-    .settingsWindowLink::after {
+    .settingsWindowLink::after, #topnav #settingsWindowLink::after {
         content: "4chan";
         font-size: 15px !important;
         position: absolute !important;
@@ -455,7 +459,7 @@
         background-image: none !important;
         transition: background-position 0.1s linear 0s !important;
     }
-    a:not(.filtered) {
+    a:not(.filtered), .button {
         text-decoration: none !important;
     }
     #globalMessage * {
@@ -546,15 +550,24 @@
         border-radius: 4px !important;
         z-index: 4 !important;
     }
-    #qr .close {
+    #qr .close, #theme-close {
         position: absolute !important;
-        top: 1px !important;
-        left: 0px !important;
         height: 21.5px !important;
         z-index: 15 !important;
         font-size: 0px !important;
         width: 22px !important;
         background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAVCAYAAABCIB6VAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAABIVJREFUSEt9VWkspWcYtdXY1zEYjZJWB1HbIETRSGiVBsGPkoyKJkgkEsTyw1JbjS0jYYJEhWsbYilKI5YfElftKoJo1BZMcdOQdMwUT8/z5d4bN3S+5Nx7v/d+73nPc57lU1JSvJRxqwZoALo6OjoPvb29raKjoz+Li4t7GhMT8zQ4ONjR2tr6Y/xvDhgDOsADQBXg/XcuFax8AGjxhvDw8CcikSh8fn4+f3t7W3RwcPDzzs5O79ra2k/Dw8NZ6enpIVZWVg549kPAENCUilIgl5FqQ83jjo6ObzY3N+uXl5dXenp6JAUFBW9TU1OvMzMzryoqKt6MjY29Xl1dnRkfHy+LjY39UlNT8xOQPpSK4ogFcln4rPRRe3t7ONSJh4aG/omKirqBKtLW1iZVVVVSV1cnfX19cnR0JBx0Mzs7K8EBfbAnCHtl5KycbRE+2FPjtra20L29vd+h6trS0lIgw/q94EN8fX0JtrxbXFwccXV1DZSSsy3sueCrfmhoqN3u7u4rKL4yNTX9X8LbB/HBPj4+tLCwcN7c3Pwc+7yknnNClR4YGxubDg4OPkNYf/r7+5OysrJA7OXlRQkJCWRiYiLcM5GTkxMlJSWRmZmZsMbKs7Ozr5HU6cjIyG+xZsvRM7E2FmyRrJrGxsYLPT09udq8vDw6PDyknJwcMjIyIhcXF0IyaWNjg/z8/OTPOTg4sOrXVVVVP4DPDXjMxPr5+fnex8fHI/Hx8f+qqanJN9jY2FBLSwvt7+9Ta2srTU5O0tHREaWkpAgJldmCiKmzs/MSUYuw5gdYMbFhZWVlgEQiEQcFBd3IbJBt4iROTEwQX+fn51RSUkJaWloKOeBD6urqbqampgaxj5Now8RGpaWlgaenp9MhISEKxOypm5sbicViuri4oLOzM6qvrydzc/M7xA0NDdcQMAC+r4BPBcVpaWm+CHckMTFRwQp3d3dCeIQSpPLycsHfk5MTKi4uJg5fFhUnt7u7+7Krq6vttmJ9VILj0tLSS/h4YWhoKN9QVFREaGNKTk4mAwMDsrW1paamJlpZWaGAgAD5c87OzoQu/QvJfn7bY23cWFZXVz9DZfwRFhZGKioqwia0NwUGBgolJVPHZYZOk/usoaFBZWVlVzMzM2IPD4/vb1cFd8kjOzs7V3SQaGBg4NLe3l5OLiO875uTGBERQRhUEpTkCyTxazwnr2Oh84CP4HUUVM8g3GsO730tjcFDmCWESnjb19c3bGFhEQMOD4CnndB58lmB5rDLyMj4Dh34G2r2DSaXMIR0dXUFOzhszgF3X2Fh4fXc3Nzf/f39v3p6eiaBxwfgQSSfFQrTDQ1iBw/DsOHl1tbWMjrqDEl9V1NTc4NSu+rt7b1cX19/jck2k5ub+wKlx0o/l5Ly6JRPN1Ytn8f4bYomeYLE+eKNEVtbW/vj6Ojoq+np6V8QxSDKqj0rK6uEEyX1lMO/dx4zMau+Tc4nWwL2Ut++wDd3FBd/AOAL8EzgRLGnRlKlPOSZ586l8M7Dv3yABWANcJtyR7E6K+C977z/AP97RDZsb7EeAAAAAElFTkSuQmCC') !important;
+    }
+    #qr .close {
+        top: 1px !important;
+        left: 0px !important;   
+    }
+    #theme:not(:hover) #theme-close {
+        opacity: 0 !important;
+    }
+    #theme-close {
+        top: -11px !important;
+        left: -10px !important; 
     }
     #qr .move {
         width: 105% !important;
@@ -756,7 +769,7 @@
         margin-top: -2px !important;
         height: 27px !important;
     }
-    #options {
+    #options, #theme {
         border-radius: 4px !important;
     }
     #options label {
