@@ -4,33 +4,6 @@
     
     /* Colors */
 
-
-    .flashListing tr:nth-of-type(2n+1) {
-        background: rgb(30,30,30) !important;
-        }
-        
-    .flashListing .postblock {
-        background: rgb(50,50,50) !important;
-        color: rgb(255,255,255) !important;
-        border: 1px solid rgb(80,150,150) !important;;
-        }
-        
-    .flashListing a {
-        color: rgb(80,150,150) !important;
-        }
-        
-    .flashListing a:hover {
-        color: rgb(40,75,75) !important;
-        }
-        
-    .flashListing a:visited {
-        color: rgb(80,150,255) !important;
-        }
-
-    .flashListing .highlightPost {
-        background: rgb(50,50,50) !important;
-        }
-
     body {
         background: rgb(240,240,240) !important;
         color: rgb(0,0,0) !important;
@@ -161,10 +134,10 @@
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2) !important;
         border: 1px solid rgba(0,0,0, 0.1) !important;
     }
-    a.quotelink, .next form::after, .prev form::after {
+    a.quotelink, .next form::after, .prev form::after, .flashListing a {
         color: rgb(0, 136, 204) !important;
     }
-    a.quotelink:hover, .next:hover form::after, .prev:hover form::after {
+    a.quotelink:hover, .next:hover form::after, .prev:hover form::after, .flashListing a:hover {
         color: rgb(0, 85, 128) !important;
     }
     .name, .postertrip, .post-author {
@@ -305,6 +278,20 @@
     }
     #delform hr {
         border-color: transparent !important;
+    }
+    .flashListing tr:nth-of-type(2n+1) {
+        background: rgb(230,230,230) !important;
+    }   
+    .flashListing .postblock {
+        background-color: rgb(240,240,240) !important;
+        color: rgb(0,0,0) !important;
+        border: none !important;
+    }
+    .flashListing .subject {
+        color: rgb(15,12,93) !important;
+    }
+    .flashListing .highlightPost {
+        background: rgb(210,210,210) !important;
     }
 
     /* Layout */
