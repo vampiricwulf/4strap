@@ -701,7 +701,7 @@
     span.container {
         margin-left: -2px !important;
     }
-    .fileInfo>a {
+    .reply .fileInfo>a:last-of-type {
         margin-right: 10px !important;
     }
     .reply .fileThumb, .thumb {
