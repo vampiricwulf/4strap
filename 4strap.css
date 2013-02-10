@@ -101,9 +101,6 @@
         border: 1px solid rgb(217,217,217) !important;
         color: rgb(0,0,0) !important;
     }
-    #hideBtn>a:first-of-type::after {
-        color: rgb(0,0,0) !important;
-    }
     input::-moz-placeholder, textarea::-moz-placeholder {
         color: rgb(153, 153, 153) !important;
     }
@@ -266,11 +263,18 @@
         background: rgb(255,255,255) !important;
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4) !important; 
     }
-    a.summary {
+    .summary {
         background: rgb(255,255,255) !important;
         border: 1px solid rgb(221,221,221) !important;
         box-shadow: 0px 3px 7px rgba(50, 50, 50, 0.2) inset !important;
         color: rgb(187,187,187) !important;
+    }
+    .summary > a {
+        color: rgb(187,187,187) !important;
+        font-weight: bold !important;
+    }
+    .summary > a:hover {
+        color: rgb(147,147,147) !important;
     }
     .thread>.opContainer>.op .subject:not(:empty) {
         background: -moz-linear-gradient(center top , rgb(239, 239, 239), rgb(219, 219, 219)) repeat scroll 0% 0% transparent !important;
@@ -328,7 +332,8 @@
     .reply:not(:hover) .backlink.filtered,
     .postingMode ~ #watcher,
     #watcher:not(:hover)>div:not(.move),
-    #topnav #first-run {
+    #topnav #first-run,
+    #hideBtn {
         display: none !important;
     }
     .replyContainer>.reply>.postInfo {
@@ -490,21 +495,6 @@
         width: 90% !important;
         max-height: none !important;
         margin-bottom: 10px !important;
-    }
-    #hideBtn {
-        font-size: 0px !important;
-        position: relative !important;
-        top: 20px;
-        width: 100px !important;
-        left: 96px;
-    }
-    #hideBtn a {
-        font-size: 11px !important;
-        margin-right: 3px;
-    }
-    #hideBtn>a:first-of-type::after {
-        content: " |";
-        font-size: 11px;
     }
     #qr [type=file] [type=text] {
         margin-top: -1px !important;
@@ -820,7 +810,7 @@
     #options label {
         text-decoration: none !important;
     }
-    a.summary {
+    .summary {
         font-size: 11px !important;
         position: relative;
         left: 35px;
@@ -842,6 +832,20 @@
         right: 8px;
         display: table !important;
         width: auto !important;
+
+    }
+    .favicon ~ .subject:not(:empty) {
+        float: left !important;
+    }
+    .favicon ~ .menu_button span {
+        top: -3px !important;
+    }
+    .favicon {
+        position: relative !important;
+        top: 3px !important;
+    }
+    .op .postInfo {
+    display: block !important;
     }
     #imgControls>label {
         font-size: 0px !important;
