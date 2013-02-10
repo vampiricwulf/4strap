@@ -4,6 +4,11 @@
     
     /* Colors */
 
+    #ihover {
+        border-radius: 20px !important;
+        padding-bottom: 0 !important;
+        display: inline !important;
+    }
     html {
         background: black !important;
     }
