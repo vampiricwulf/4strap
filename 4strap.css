@@ -164,10 +164,10 @@
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2) !important;
         border: 1px solid rgba(0,0,0, 0.1) !important;
     }
-    a.quotelink {
+    a.quotelink, .next form::after, .prev form::after {
         color: rgb(0, 136, 204) !important;
     }
-    a.quotelink:hover {
+    a.quotelink:hover, .next:hover form::after, .prev:hover form::after {
         color: rgb(0, 85, 128) !important;
     }
     .name, .postertrip, .post-author {
@@ -299,13 +299,17 @@
     .panelHeader {
         border-color: rgb(230,230,230) !important;
     }
+    #delform hr {
+        border-color: transparent !important;
+    }
 
     /* Layout */
     
     #absbot, 
     .replyContainer>.reply input, 
     #navbotright,
-    hr, .deleteform, 
+    body > hr,
+    .deleteform, 
     .stylechanger, 
     #styleSwitcher,
     #dump,
@@ -745,7 +749,7 @@
     }
     .pagelist {
         border-radius: 4px !important;
-        margin: 20px 10px 20px 100px !important;
+        margin: 0px 10px 20px 100px !important;
         padding: 0px !important; 
     }
     .pages, .prev span, .next span {
@@ -754,10 +758,14 @@
     .prev span::after {
         font-size: 13px !important;
         content: "<<" !important;
+        position: relative !important;
+        left: 1px !important;
     }
     .next span::after {
         font-size: 13px !important;
         content: ">>" !important;
+        position: relative !important;
+        right: 2px !important;
     }
     .pages>a, .pages>strong {
         font-size: 13px !important;
@@ -766,6 +774,35 @@
     }
     .next {
         float: right !important;
+    }
+    .next, .prev {
+        position: relative !important;
+        width: 23px !important;
+    }
+    .prev {
+        padding-right: 1px !important;
+    }
+    .next input, .next input:hover, .prev input, .prev input:hover {
+        font-size: 0px !important;
+        background: none !important;
+        border: none !important;
+    }
+    .next form::after {
+        content: ">>";
+        left: 2px !important;
+    }
+    .prev form::after {
+        content: "<<";
+        left: 5px !important;
+    }
+    .next form::after, .prev form::after {
+        font-size: 13px !important;
+        pointer-events: none !important;
+        position: absolute !important;
+        top: 4px !important;
+    }
+    .next:hover form::after, .prev:hover form::after {
+        cursor: pointer !important;
     }
     .cataloglink {
         padding-left: 0px !important;
