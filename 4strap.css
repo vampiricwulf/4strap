@@ -316,7 +316,6 @@
     iframe,
     #imgControls>label input,
     #qr .move select,
-    .reply:not(:hover) .backlink.filtered,
     .postingMode ~ #watcher,
     #watcher:not(:hover)>div:not(.move),
     #topnav #first-run,
@@ -674,6 +673,9 @@
         opacity: 0.3 !important;
         text-decoration: none !important;
         margin-right: 5px !important;
+    }
+    .reply:not(:hover) .backlink.filtered {
+        opacity: 0 !important;
     }
     .quotelink.filtered {
         text-decoration: none !important;
