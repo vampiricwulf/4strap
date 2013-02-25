@@ -4,6 +4,9 @@
     
     /* Colors */
 
+    #fs_data tbody > tr:nth-of-type(1), #fs_status {
+        background: rgb(50,50,50) !important;
+    }
     .MPNavSpan {
         font-size: 15px !important;
         position: absolute !important;
