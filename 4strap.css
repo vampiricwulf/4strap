@@ -4,6 +4,47 @@
     
     /* Colors */
 
+    .MPNavSpan {
+        font-size: 15px !important;
+        position: absolute !important;
+        top: 25px !important;
+        width: 98px !important;
+    }
+    a.MPNavLink {
+        font-size: 15px !important;
+        width: 97px !important;
+    }
+    #navtopright .MPNavSpan a[target] {
+        display: inline !important;
+    }
+    .MPMenu, .MPSettingsBox {
+        background: rgb(50,50,50) !important;
+        border: 1px solid white !important;
+        border-radius: 4px !important;
+    }
+    .MPContentContainer, .MPSeekTimeLeft, .MPSeekTimeRight, .MPSeekTime, .MPVolumeValue, .MPVolumeLabel, .MPDownloadsLabel, .MPDownloadsContent div, .MPDownloadsContainer, .MPPlaylistContainer {
+        background: rgb(50,50,50) !important;
+        color: white !important;
+        text-shadow: none !important;
+    }
+    .MPTitle, .MPTitleBarContainer {
+        background: rgb(100,100,100) !important;
+        color: white !important;
+        text-shadow: none !important;
+    }
+    a.MPMainButtonLeft:hover, .MPMainButtonRight:hover, .MPMainButtonGeneric:hover, .MPVolumeBar {
+        color: white !important;
+        background: rgb(30,30,30) !important;
+    }
+    .MPSeekBar {
+        background: rgb(100,100,100) !important;
+    }
+    .board > div:nth-child(1) {
+        position: absolute !important;
+        display: inline !important;
+        left: 35% !important;
+        top: 280px !important;
+    }
     #ihover {
         border-radius: 20px !important;
         padding-bottom: 0 !important;
@@ -457,7 +498,8 @@
     .postingMode ~ #watcher,
     #watcher:not(:hover)>div:not(.move),
     #topnav #first-run,
-    #hideBtn {
+    #hideBtn,
+    .MPFooterBarContainer {
         display: none !important;
     }
     .replyContainer>.reply>.postInfo {
