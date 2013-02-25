@@ -50,10 +50,10 @@
     .MPSeekBar {
         background: rgb(100,100,100) !important;
     }
-    .board > div:nth-child(1):not([class='thread']) {
+    .board > div:nth-child(1):not(.thread) {
         position: absolute !important;
         display: inline !important;
-        left: 35% !important;
+        left: 40% !important;
         top: 280px !important;
     }
     #ihover {
