@@ -442,6 +442,9 @@
     .summary > a:hover {
         color: rgb(147,147,147) !important;
     }
+    .subject:not(:empty) {
+        color: rgb(153, 153, 153) !important;
+    }
     .thread>.opContainer>.op .subject:not(:empty) {
         background: -moz-linear-gradient(center top , rgb(16, 16, 16), rgb(36, 36, 36)) repeat scroll 0% 0% transparent !important;
         color: rgb(153, 153, 153) !important;
