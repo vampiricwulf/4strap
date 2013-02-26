@@ -26,4 +26,6 @@ TODO
 * ~~Fix Pages~~?
 * ~~Fix 4chan-x menu~~
 * ~~Fix main page~~?
+* ~~Fix 4cs~~??
+* ~~Fix 4sight~~?
 * Fix Everything I Can
