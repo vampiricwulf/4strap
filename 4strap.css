@@ -30,6 +30,9 @@
         color: white !important;
         text-shadow: none !important;
     }
+    .MPVideoContainer>iframe {
+        display: inline !important;
+    }
     .MPResizingContainerInner {
         background: rgb(200,200,200) !important;
         border-radius: 10px !important;
