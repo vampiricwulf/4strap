@@ -38,12 +38,12 @@
         color: black !important;
         text-shadow: none !important;
     }
-    .MPTitle, .MPTitleBarContainer {
+    .MPTitle, .MPTitleBarContainer, .MPTheatreOnly {
         background: rgb(100,100,100) !important;
         color: white !important;
         text-shadow: none !important;
     }
-    a.MPMainButtonLeft:hover, .MPMainButtonRight:hover, .MPMainButtonGeneric:hover, .MPVolumeBar {
+    .MPMainButtonsLeft a:hover, .MPMainButtonsRight a:hover, .MPVolumeBar {
         color: white !important;
         background: rgb(30,30,30) !important;
     }
