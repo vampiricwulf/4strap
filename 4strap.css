@@ -59,9 +59,8 @@
     .MPSeekBar {
         background: rgb(100,100,100) !important;
     }
-    .board > div:nth-child(1):not(.thread) {
+    .MPThreadControls {
         position: absolute !important;
-        display: inline !important;
         left: 40% !important;
         top: 280px !important;
     }
