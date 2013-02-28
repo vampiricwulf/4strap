@@ -4,6 +4,13 @@
     
     /* Colors */
 
+    div>input.MPSoundUploaderOriginalSubmitButtonHidden {
+        display: none !important;
+    }
+    #soundsFileList input {
+        color: white !important;
+        width: 100% !important;
+    }
     #fs_data tbody > tr:nth-of-type(1), #fs_status {
         background: rgb(50,50,50) !important;
     }
@@ -392,7 +399,7 @@
         background-color: rgb(50, 50, 50) !important;
     }
     .subMenu>.entry:hover:first-of-type {
-        box-shadow: -1px 0px 0px rgb(100, 100, 100) !important;
+        border-right: 3px solid rgb(100, 100, 100) !important;
     }
     .hasSubMenu::after {
         border-left-color: rgb(80,150,150) !important;
@@ -947,6 +954,8 @@
     }
     .subMenu {
         top: -7px !important;
+        left: -100% !important;
+        width: 108px !important;
     }
     a.useremail::before {
         position: relative !important;
