@@ -48,7 +48,7 @@
     }
     .MPResizingContainerInner {
         background: rgb(200,200,200) !important;
-        border-radius: 10px !important;
+        border-radius: 7px !important;
     }
     .MPResizingContainerText {
         color: black !important;
@@ -72,7 +72,7 @@
         top: 280px !important;
     }
     #ihover {
-        border-radius: 20px !important;
+        border-radius: 4px !important;
         padding-bottom: 0 !important;
         display: inline !important;
     }
@@ -765,7 +765,7 @@
         -moz-border-left-colors: none !important;
         border-image: none !important;
         -moz-appearance: none !important;
-        border-radius: 4px 4px 4px 4px !important; 
+        border-radius: 4px !important; 
     }
     #dump {
         float: right !important;
@@ -935,7 +935,7 @@
         position: relative !important;
         right: 1px !important;
         width: 98% !important;
-        border-radius: 0 0px 4px 4px !important;
+        border-radius: 0px 0px 4px 4px !important;
         padding: 3px !important;
         text-align: center;
     }
