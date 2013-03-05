@@ -256,7 +256,7 @@
         border-top: 1px solid rgb(221,221,221);
         box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2) !important; 
     }
-    #imgControls>label::after {
+    #imgControls label::after {
         background: -moz-linear-gradient(center top , rgb(114, 114, 114), rgb(21, 19, 19)) repeat scroll 0% 0% transparent !important;
         color: rgb(255, 255, 255) !important;
         text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.2);
@@ -314,7 +314,7 @@
     #qr #autohide,
     #qp .menu_button,
     iframe,
-    #imgControls>label input,
+    #imgControls label input,
     #qr .move select,
     .postingMode ~ #watcher,
     #watcher:not(:hover)>div:not(.move),
@@ -837,10 +837,10 @@
         position: relative !important;
         top: 3px !important;
     }
-    #imgControls>label {
+    #imgControls label {
         font-size: 0px !important;
     }
-    #imgControls>label::after {
+    #imgControls label::after {
         font-size: 12px !important;
         font-weight: bold;
         content: url('http://i.imgur.com/yNCic.png') " Expand" ;
