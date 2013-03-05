@@ -319,7 +319,8 @@
     .postingMode ~ #watcher,
     #watcher:not(:hover)>div:not(.move),
     #topnav #first-run,
-    #hideBtn {
+    #hideBtn,
+    #toggleMsgBtn {
         display: none !important;
     }
     .replyContainer>.reply>.postInfo {
@@ -481,6 +482,7 @@
         width: 90% !important;
         max-height: none !important;
         margin-bottom: 10px !important;
+        margin-top: 15px !important;
     }
     #qr [type=file] [type=text] {
         margin-top: -1px !important;
