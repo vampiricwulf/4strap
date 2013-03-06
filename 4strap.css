@@ -90,10 +90,14 @@
     #doc li {
         background: none !important;
     }
-    #preview-tooltip-ws, #doc h3 {
+    #preview-tooltip-ws {
         background: black !important;
         color: white !important;
         border: 1px solid white !important;
+    }
+    #doc h3 {
+        background: black !important;
+        color: white !important;
     }
     #preview-tooltip-ws h2, #what4chan {
         background: black !important;
