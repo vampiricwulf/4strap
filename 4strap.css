@@ -4,11 +4,25 @@
     
     /* Colors */
 
-    .navLinks {
-        display: inline-block !important;
-        position: absolute !important;
-        right: 60px !important;
-        margin-top: -123px !important;
+    .stylechanger.desktop {
+        visibility: hidden !important;
+        display: inline !important;
+    }
+    .stylechanger.desktop>a {
+        visibility: visible !important;
+        position: fixed !important;
+        bottom: 10px !important;
+        left: 10px !important;
+        background: black !important;
+    }
+    .stylechanger.desktop>a:before {
+        content: "[";
+    }
+    .stylechanger.desktop>a:after {
+        content: " Authenticator]";
+    }
+    .stylechanger select {
+        display: none !important;
     }
     .boardSubtitle {
         position: relative !important;
@@ -27,9 +41,11 @@
     }
     .MPNavSpan {
         font-size: 15px !important;
-        position: absolute !important;
-        top: 25px !important;
+        position: fixed !important;
+        top: 2px !important;
+        right: 120px !important;
         width: 98px !important;
+        background: black !important;
     }
     a.MPNavLink {
         font-size: 15px !important;
@@ -516,7 +532,7 @@
     }
     #watcher.reply {
         position: fixed !important;
-        right: 70px !important;
+        right: 0px !important;
     }
     #watcher:hover {
         background: rgba(10,10,10,0.7) !important;
@@ -555,10 +571,10 @@
     .replyContainer>.reply input, 
     #navbotright,
     body > hr,
-    .deleteform, 
-    .stylechanger, 
+    .deleteform,  
     #styleSwitcher,
     #dump,
+    .navLinks.desktop,
     .postingMode,
     .toggleCatalog,
     #navtopright a[target],
@@ -901,7 +917,6 @@
         display: inline-block !important;
         margin-left: 0 !important;
         padding-left: 30px !important;
-        width: 100% !important;
         vertical-align: middle !important;
         border-bottom: 2px solid black !important;
     }
