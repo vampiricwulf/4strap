@@ -4,6 +4,11 @@
     
     /* Colors */
 
+    .boardSubtitle {
+        position: relative !important;
+        top: -30px !important;
+        color: white !important;
+    }
     div>input.MPSoundUploaderOriginalSubmitButtonHidden {
         display: none !important;
     }
@@ -521,7 +526,6 @@
     .postingMode,
     .toggleCatalog,
     #navtopright a[target],
-    .boardSubtitle,
     .center,
     #boardNavDesktopFoot,
     #qr #autohide,
