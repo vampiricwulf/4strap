@@ -4,6 +4,12 @@
     
     /* Colors */
 
+    .navLinks {
+        display: inline-block !important;
+        position: absolute !important;
+        right: 60px !important;
+        margin-top: -123px !important;
+    }
     .boardSubtitle {
         position: relative !important;
         top: -30px !important;
@@ -84,7 +90,7 @@
     html {
         background: black !important;
     }
-    #backtoboard {
+    #backtoboard, body>div>span {
         color: white !important;
     }
     .exblock {
@@ -527,7 +533,7 @@
         background: rgb(30,30,30) !important;
     }
         
-    .postblock, .hborder, .border, body.read {
+    .postblock, .hborder, .border, body.read, .postForm tr>td {
         background: rgb(50,50,50) !important;
         color: rgb(255,255,255) !important;
         border: 1px solid rgb(80,150,150) !important;;
@@ -553,7 +559,6 @@
     .stylechanger, 
     #styleSwitcher,
     #dump,
-    .navLinks.desktop, 
     .postingMode,
     .toggleCatalog,
     #navtopright a[target],
