@@ -166,7 +166,7 @@
     #qr .move select {
         color: black !important;
     }
-    body {
+    body:not(.read) {
         background: rgb(0,0,0) !important;
         color: rgb(240,240,240) !important;
     }
@@ -218,10 +218,18 @@
     .settingsWindowLink:hover::after, #topnav #settingsWindowLink:hover::after {
         color: rgb(255,255,255) !important;
     }
-    div.boardBanner > div.boardTitle {
+    div.boardBanner > div.boardTitle, body.read>h2 {
         color: rgb(255,255,255) !important;
         text-shadow: 1px 1px 1px rgb(0, 0, 0) !important;
         background: rgba(0,0,0,0.3) !important;
+    }
+    body.read>h2 {
+        color: rgb(255,255,255) !important;
+        text-shadow: 1px 1px 1px rgb(0, 0, 0) !important;
+        background: rgba(0,0,0,0.3) !important;
+        display: inline !important;
+        position: relative !important;
+        left: 45% !important;
     }
     form>h1>a {
         color: rgb(255, 255, 255) !important;
@@ -499,12 +507,15 @@
         background: rgb(30,30,30) !important;
     }
         
-    .postblock, .hborder, .border {
+    .postblock, .hborder, .border, body.read {
         background: rgb(50,50,50) !important;
         color: rgb(255,255,255) !important;
         border: 1px solid rgb(80,150,150) !important;;
     }
-
+    .post.even {
+        border-top: 1px solid rgb(80,150,150) !important;
+        border-bottom: 1px solid rgb(80,150,150) !important;
+    }
     .flashListing .highlightPost {
         background: rgb(50,50,50) !important;
     }
@@ -537,7 +548,8 @@
     #watcher:not(:hover)>div:not(.move),
     #topnav #first-run,
     #hideBtn,
-    .MPFooterBarContainer {
+    .MPFooterBarContainer,
+    body.read>.pages {
         display: none !important;
     }
     .replyContainer>.reply>.postInfo {
@@ -852,6 +864,21 @@
         font-size: 11px !important;
         width: 100% !important;
         vertical-align: middle !important;
+    }
+    body.read .postnum {
+        position: absolute !important;
+    }
+    body.read blockquote {
+        position: relative !important;
+        left: -10px !important;
+    }
+    body.read .postinfo {
+        display: inline-block !important;
+        margin-left: 0 !important;
+        padding-left: 30px !important;
+        width: 100% !important;
+        vertical-align: middle !important;
+        border-bottom: 2px solid black !important;
     }
     .inline {
         font-size: 13px !important;
