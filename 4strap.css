@@ -48,6 +48,9 @@
         border-bottom: 1px solid rgb(210, 105, 17) !important;
         color: rgb(0,0,0) !important;
     }
+    .settingsWindowLink {
+    	color: transparent !important;
+    }
     .settingsWindowLink::after, #topnav #settingsWindowLink::after {
         color: rgb(153,153,153) !important;
     }
