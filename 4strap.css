@@ -326,7 +326,8 @@
     .postingMode ~ #watcher,
     #watcher:not(:hover)>div:not(.move),
     #topnav #first-run,
-    #hideBtn {
+    #hideBtn,
+    #navtopright>#settingsWindowLink {
         display: none !important;
     }
     .replyContainer>.reply>.postInfo {
