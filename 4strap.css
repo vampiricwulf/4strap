@@ -48,7 +48,7 @@
         border-bottom: 1px solid rgb(210, 105, 17) !important;
         color: rgb(0,0,0) !important;
     }
-    .settingsWindowLink {
+    .settingsWindowLink,#settingsWindowLink  {
     	color: transparent !important;
     }
     .settingsWindowLink::after, #topnav #settingsWindowLink::after {
@@ -330,7 +330,7 @@
     #watcher:not(:hover)>div:not(.move),
     #topnav #first-run,
     #hideBtn,
-    #navtopright>#settingsWindowLink {
+    body>#boardNavDesktop #settingsWindowLink {
         display: none !important;
     }
     .replyContainer>.reply>.postInfo {
