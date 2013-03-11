@@ -96,7 +96,7 @@
     .MPThreadControls {
         position: absolute !important;
         left: 40% !important;
-        top: 280px !important;
+        top: 300px !important;
     }
     #ihover {
         border-radius: 4px !important;
@@ -208,6 +208,7 @@
         box-shadow: 18px 0px 10px 3px rgba(10,10,10,0.2) !important;
         background-color: rgba(0, 0, 0,0.4) !important;
         background-image: linear-gradient(rgba(0, 0, 0,0.9), rgba(80,150,150,0.9)) !important;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0,0,0,0.9)), color-stop(1, rgba(80,150,150,0.9)));
         background-repeat: repeat-x !important;
         border-bottom: 1px solid rgb(20,20,20) !important;
     }
@@ -233,6 +234,9 @@
     .current::after {
         border-bottom: 1px solid rgb(120,200,200) !important;
         color: rgb(250,250,250) !important;
+    }
+    .settingsWindowLink,#settingsWindowLink  {
+        color: transparent !important;
     }
     .settingsWindowLink::after, #topnav #settingsWindowLink::after {
         color: rgb(200,200,200) !important;
@@ -274,6 +278,7 @@
         color: rgb(255, 255, 255) !important;
         text-shadow: 0px -1px 0px rgba(255, 255, 255, 0.25) !important;
         background-image: linear-gradient(to bottom, rgb(120, 200, 200), rgb(80, 150, 150)) !important;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(120, 200, 200)), color-stop(1, rgb(80, 150, 150)));
         background-repeat: repeat-x !important;
         border-color: rgba(150, 150, 150, 0.1) rgba(255, 255, 255, 0.1) rgba(255, 255, 255, 0.25) !important;
         background-color: rgb(120, 200, 200) !important;
@@ -332,6 +337,7 @@
     input[type="submit"], #dump, #qr [type="file"] [type="button"] {
         border-color: rgba(255, 255, 255, 0.15) rgba(255, 255, 255, 0.15) rgba(255, 255, 255, 0.25) !important;
         background-image: linear-gradient(to bottom, rgb(25, 25, 25), rgb(0, 0, 0)) !important;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(25, 25, 25)), color-stop(1, rgb(0, 0, 0)));
         text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75) !important;
         box-shadow: 0px 1px 0px rgba(30, 30, 30, 0.2) inset, 0px 1px 2px rgba(220, 220, 220, 0.05) !important;
         color: rgb(255,255,255) !important;
@@ -386,6 +392,7 @@
         border-bottom: 1px solid rgb(51, 51, 51) !important;
         background-color: rgb(30, 30, 30) !important;
         background-image: linear-gradient(rgb(7, 7, 7), rgb(30, 30, 30)) !important;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(7,7,7,1)), color-stop(1, rgba(30,30,30,1)));
         background-repeat: repeat-x !important;
     }
     .reply .menu_button {
@@ -457,6 +464,9 @@
     .entry:hover {
         color: rgb(80, 150, 150) !important;
         background-color: rgb(50, 50, 50) !important;
+        background-image: linear-gradient(to bottom, rgb(0, 136, 204), rgb(0, 119, 179)) !important;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(0, 136, 204)), color-stop(1, rgb(0, 119, 179)));
+        background-repeat: repeat-x !important;
     }
     .subMenu>.entry:hover:first-of-type {
         border-right: 3px solid rgb(100, 100, 100) !important;
@@ -514,6 +524,7 @@
     }
     .thread>.opContainer>.op .subject:not(:empty) {
         background: -moz-linear-gradient(center top , rgb(16, 16, 16), rgb(36, 36, 36)) repeat scroll 0% 0% transparent !important;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(16, 16, 16)), color-stop(1, rgb(36, 36, 36)));
         color: rgb(153, 153, 153) !important;
         text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
         border-top: 1px solid rgb(34,34,34);
@@ -521,6 +532,7 @@
     }
     #imgControls>label::after {
         background: -moz-linear-gradient(center top , rgb(80, 150, 150), rgb(21, 19, 19)) repeat scroll 0% 0% transparent !important;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(80, 150, 150)), color-stop(1, rgb(21, 19, 19)));
         color: rgb(255, 255, 255) !important;
         text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.2);
         box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) !important; 
@@ -590,7 +602,8 @@
     #topnav #first-run,
     #hideBtn,
     .MPFooterBarContainer,
-    body.read>.pages {
+    body.read>.pages,
+    body>#boardNavDesktop #settingsWindowLink {
         display: none !important;
     }
     .replyContainer>.reply>.postInfo {
@@ -765,22 +778,6 @@
         width: 90% !important;
         max-height: none !important;
         margin-bottom: 10px !important;
-    }
-    #hideBtn {
-        padding-top: 10px !important;
-        font-size: 0px !important;
-        position: relative !important;
-        width: 80px !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-    #hideBtn a {
-        font-size: 11px !important;
-        margin-right: 3px;
-    }
-    #hideBtn>a:first-of-type::after {
-        content: " |";
-        font-size: 11px;
     }
     #qr [type=file] [type=text] {
         margin-top: -1px !important;
@@ -1195,6 +1192,16 @@
         border-top: none !important;
         border-right: none !important;
         border-radius: 3px !important;  
+    }
+    
+    .backlink.filtered {
+        display: none !important;
+    }
+    
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        .nameBlock, .dateTime {
+            margin-right: 3px !important;
+        }
     }
     
 }
