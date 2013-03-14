@@ -603,7 +603,8 @@
     #hideBtn,
     .MPFooterBarContainer,
     body.read>.pages,
-    body>#boardNavDesktop #settingsWindowLink {
+    body>#boardNavDesktop #settingsWindowLink,
+    .hidden>.post.reply {
         display: none !important;
     }
     .replyContainer>.reply>.postInfo {
