@@ -424,7 +424,7 @@
         color: rgb(255,255,255) !important;
         display: inline-block !important;
     }
-    .op, .inline .postContainer.replyContainer.hidden .reply {
+    .op, .inline .postContainer.replyContainer.hidden .reply, #qp .hidden>.post.reply {
         display: block !important;
     }
     .op .fileInfo a {
