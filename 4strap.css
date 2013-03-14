@@ -385,6 +385,15 @@
     a.quotelink:hover, .next:hover form::after, .prev:hover form::after, .flashListing a:hover {
         color: rgb(0, 255, 0) !important;
     }
+    a.quotelink.filtered {
+        color: red !important;
+    }
+    a.quotelink.filtered:after {
+        content: " (Filtered)";
+    }
+    a.quotelink.filtered:hover {
+        color: rgb(200,0,0) !important;
+    }
     .name, .postertrip, .post-author {
         color: rgb(80,220,80) !important;
     }
