@@ -647,6 +647,8 @@
     #boardNavDesktop>a[href*="/tv/"],
     #boardNavDesktop>a[href*="/wsg/"],
     #boardNavDesktop>a[href*="/q/"],
+    #boardNavDesktop>a[href*="/lgbt/"],
+    #boardNavDesktop>a[href*="/vr/"],
     #boardNavDesktop>a.current,
     #boardNavDesktop>a.current::after
     {
