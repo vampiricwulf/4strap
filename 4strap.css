@@ -1199,4 +1199,7 @@
         margin-bottom: 40px !important;
         margin-top: 40px !important;
     }
+        span.container {
+      		margin-left: 0px !important;
+    	}
 }
